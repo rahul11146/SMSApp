@@ -1,0 +1,166 @@
+﻿@model SMSApp.Models.SC.SeatSearchSC
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/js/appjs/seatbook/seatbooksearch.js"></script>
+
+<div ng-controller="SeatBookSearchCtrl">
+    <div class="col-xl-12 PageMargin">
+        <section class="box ">
+            <header class="panel_header">
+                <h2 class="title float-left" style="width:100% !important">
+                    <span>状況検索</span>
+                </h2>
+            </header>
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-3 col-md-3 col-lg-2">
+                        <div class="form-group">
+                            <label class="form-label title">利用者検索</label>
+                            <div class="controls">
+                                <div class="input-group sm-3">
+                                    <input id="txtLastName" type="text" class="form-control txtLastName" placeholder="Enter 姓（漢字）..." />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-3 col-lg-2">
+                        <div class="form-group">
+                            <label class="form-label title"></label>
+                            <div class="controls" style="margin-top:12px !important">
+                                <div class="input-group sm-3">
+                                    <input id="txtFirstName" type="text" class="form-control txtFirstName" placeholder="Enter 名（漢字）..." />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-6 col-lg-2">
+                        <div class="form-group">
+                            <label class="form-label title"></label>
+                            <div class="controls">
+                                <div class="input-group sm-3" style="margin-top:12px !important">
+                                    <button type="button" class="btn btn-primary" ng-click="SeatBookSearchList('Name');">
+                                        <span class="fa fa-search"></span>
+                                        検索
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label title">フロア状況検索</label>
+                            <div class="controls">
+                                <div class="input-group sm-3">
+                                    <select id="ddlFloor" class="form-control ddlSelect2Single" ng-model="FloorId" on-Finish-Render multiple>
+                                        <option ng-repeat="item in FloorList" ng-value="item.FloorId">
+                                            {{item.FloorName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-2">
+                        <div class="form-group">
+                            <label class="form-label title"></label>
+                            <div class="controls">
+                                <div class="input-group sm-3" style="margin-top:12px !important">
+                                    <button type="button" class="btn btn-primary" ng-click="SeatBookSearchList('FLR');">
+                                        <span class="fa fa-search"></span>
+                                        検索
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label class="form-label title">所属部門</label>
+                            <div class="controls">
+                                <div class="input-group sm-3">
+                                    <select id="ddlDept" class="form-control ddlSelect2Single" on-Finish-Render>
+                                        <option ng-value="0">--Select--</option>
+                                        <option ng-repeat="item in DeptList" ng-value="item.DeptId">
+                                            {{item.DeptName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-6 col-lg-2">
+                        <div class="form-group">
+                            <label class="form-label title"></label>
+                            <div class="controls">
+                                <div class="input-group sm-3" style="margin-top:12px !important">
+                                    <button type="button" class="btn btn-primary" ng-click="SeatBookSearchList('DPT');">
+                                        <span class="fa fa-search"></span>
+                                        検索
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table id="example-11" class="display table table-hover table-condensed" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th width="6%">Sr No</th>
+                                    <th width="12%">登録状況</th>
+                                    <th width="12%">氏名</th>
+                                    <th width="12%">フロア名</th>
+                                    <th width="10%">座席ID</th>
+                                    <th width="15%">座席詳細</th>
+                                    <th width="5%">表示</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @*<tr ng-repeat="item in SeatBookSearchLst" ng-if="SeatBookSearchLst.length > 0">*@
+                                <tr dir-paginate="item in SeatBookSearchLst | orderBy: 'RowId' | itemsPerPage: pageSize | record:'currentPage':this"
+                                    pagination-id="tblSeatBookSearchLst">
+                                    <td>
+                                        <span ng-bind="item.RowId"></span>
+                                    </td>
+                                    <td ng-bind="item.BookType"></td>
+                                    <td ng-bind="item.Name"></td>
+                                    <td ng-bind="item.FloorName"></td>
+                                    <td ng-bind="item.SeatId"></td>
+                                    <td ng-bind="item.SeatDetails"></td>
+                                    <td class="text text-center">
+                                        <span style="cursor:pointer" ng-click="ViewSeat(item.FloorId,item.FloorMapId);" ng-show="item.BookType == '登録済み'">
+                                            <i class="fa fa-eye"></i>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr ng-if="SeatBookSearchLst.length == 0">
+                                    <td colspan="7">
+                                        <span class="text text-danger">該当する情報はありません。</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="text-center pull-right">
+                                            <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
+                                                                     template-url="@Url.Content("~/dirpagination.tpl.html")"
+                                                                     pagination-id="tblSeatBookSearchLst">
+                                            </dir-pagination-controls>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

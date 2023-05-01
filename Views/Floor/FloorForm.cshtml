@@ -1,0 +1,202 @@
+﻿@model SMSApp.Models.SC.FloorSC
+@using System.Security.Claims;
+@using Microsoft.AspNetCore.Mvc.Razor;
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string? mRoleCode = string.Empty;
+
+    mRoleCode = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.PrimarySid)?.Value;
+}
+
+<script src="~/js/appjs/floor/floorform.js"></script>
+
+<script type="text/javascript">
+
+    function OnUserSuccess(data) {
+
+        if (data.isSuccess == "N") {
+            $("#dvErrors").html(data.errorMessage);
+        }
+        else {
+
+            swal({
+                title: "SUCCESS!",
+                text: "Action completed successfully",
+                type: "success",
+                confirmButtonText: "OK"
+            },
+                function (isConfirm) {
+                    window.location.href = '@Url.Action("Index","Floor")';
+                });
+        }
+    }
+
+    function OnUserFailure(data) {
+        alert(JSON.stringify(data));
+    }
+
+    function RedirectBack() {
+
+        window.location.href = '@Url.Action("Index","Floor")';
+
+        return false;
+    }
+
+</script>
+
+<div ng-controller="FloorFormCtrl">
+
+    <form action="/Floor/SaveFloorData" data-ajax="true" data-ajax-success="OnUserSuccess" data-ajax-failure="OnUserFailure"
+          data-ajax-method="POST" id="form0" method="post" enctype="multipart/form-data">
+
+        <div class="col-12">
+            <section class="box">
+                <header class="panel_header">
+                    @if (Model != null)
+                    {
+                        <h2 class="title float-left">フロア情報の編集</h2>
+                    }
+                    else
+                    {
+                        <h2 class="title float-left">フロア登録</h2>
+                    }
+                    <h2 class="title float-left"> - @Html.DisplayFor(model => model.ControllerName)</h2>
+                    <span class="pull-right text-danger" style="margin-right:10px !important">(*) 必須</span>
+                </header>
+                <div class="content-body">
+                    @if (mRoleCode == "SystemAdm")
+                    {
+                        <div class="row">
+                            <div class="col-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label title">
+                                        Controller
+                                        <span class="text text-danger">*</span>
+                                    </label>
+                                    <div class="controls">
+                                        <select id="ddlController" class="form-control ddlSelect2Single" ng-model="ControllerId" onchange="OnControllerSel();" on-Finish-Render>
+                                            <option ng-selected="ControllerId == item.ControllerId" ng-value="0">--Select--</option>
+                                            <option ng-selected="ControllerId == item.ControllerId" ng-repeat="item in ControllerList" ng-value="item.ControllerId">
+                                                {{item.ControllerName}}
+                                            </option>
+                                        </select>
+                                        <div id="dvErrors" class="text-danger">
+                                            @Html.ValidationMessageFor(model => model.ControllerId)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label title">
+                                    フロア名
+                                    <span class="text text-danger">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(model => model.FloorName, new { @class = "form-control", @placeholder = "フロア名", @autocomplete = "off" })
+                                    <div class="text-danger">
+                                        @Html.ValidationMessageFor(model => model.FloorName)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label">詳細</label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(model => model.FloorDesc, new { @class = "form-control", @placeholder = "詳細", @autocomplete = "off" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    フロアレイアウト画像
+                                    <span class="text text-danger">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(model => model.FloorImage, new { @type="file", @class = "form-control" })
+
+                                    @if (Model != null && Model.ImageName != null)
+                                    {
+                                        <a href="@Url.Content(Model.ImagePath)">
+                                            @Model.ImageName
+                                        </a>
+                                    }
+
+                                    <div id="dvErrors" class="text-danger">
+                                        @Html.ValidationMessageFor(model => model.FloorImage)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label">ユーザ名表示フォントサイズ</label>
+                                <div class="controls">
+                                    @Html.TextBoxFor(model => model.UsernameFontsize, new { @id="txtUserFontSize", @class = "form-control" ,@value = "12"})
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label">バージョン</label>
+                                <div class="controls">
+                                    @Html.DisplayFor(model => model.RevNO)
+                                    @Html.HiddenFor(model => model.RevNO)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    ステータス
+                                    <span class="text text-danger">*</span>
+                                </label>
+                                <div class="controls">
+                                    @Html.RadioButtonFor(model => model.Status, "1", new { @id = "rdoStatus"})
+                                    <label class="form-label" for="rdoStatusActive">有効</label>
+                                    @Html.RadioButtonFor(model => model.Status, "0", new { @id = "rdoStatus" })
+                                    <label class="form-label" for="rdoStatusInActive">無効</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-9 col-lg-8 padding-bottom-30">
+                            <div class="text-left">
+                                <button type="submit" class="btn btn-primary" onclick="return SaveFloor();">
+                                    <span class="fa fa-save"></span>
+                                    保存
+                                </button>
+                                <button type="button" class="btn" onclick="return RedirectBack();">
+                                    <span class="fa fa-undo"></span>
+                                    戻る
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            @Html.HiddenFor(model => model.FloorId, new { @id = "txtFloorId"})
+            @Html.HiddenFor(model => model.FloorAdmId, new { @id = "txtFloorAdmId"})
+            @Html.HiddenFor(model => model.FloorCode, new { @id = "txtFloorCode"})
+            @Html.HiddenFor(model => model.FloorSrNO, new { @id = "txtFloorSrNo"})
+            @Html.HiddenFor(model => model.ControllerId, new { @id = "txtControllerId"})
+        </div>
+    </form>
+</div>
