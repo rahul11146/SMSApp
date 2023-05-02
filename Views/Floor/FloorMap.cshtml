@@ -188,7 +188,13 @@
                                         <span class="text text-danger">*</span>
                                     </label>
                                     <div class="controls">
-                                        @Html.TextBoxFor(model => model.height, new {@id="txtHeight", @class = "form-control", @placeholder = "縦", @autocomplete = "off",@value="15" })
+
+                                        <span id="spHeight"></span>
+
+                                        @Html.TextBoxFor(model => model.height, new { @id="txtHeight", @class = "form-control", @placeholder = "縦", @autocomplete = "off",@value="15" })
+
+                                        @Html.HiddenFor(model => model.height, new { @id="hiddHeight"})
+
                                         <div class="text-danger">
                                             @Html.ValidationMessageFor(model => model.height)
                                         </div>
@@ -471,8 +477,8 @@
 
             var mCordinates = PosX + "," + PosY;
 
-            $("#txtWidth").val("12");
-            $("#txtHeight").val("12");
+            $("#txtWidth").val("15");
+            $("#txtHeight").val("15");
 
             $("#spCurrentXY").text(mCordinates);
 
@@ -525,7 +531,7 @@
 
                     }
                     else if (mIsCreatedUsr == "N") {
-                        elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mFloorMapJSON[i].UserDisplay + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "')");
+                        elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mFloorMapJSON[i].UserDisplay + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "','" + mFloorMapJSON[i].DeptName + "')");
                     }
 
                 }
@@ -537,7 +543,7 @@
                 else if (mType == "Srch") {
 
                     if (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != null && mFloorMapJSON[i].UserDisplay != "") {
-                        elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mFloorMapJSON[i].UserDisplay + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "')");
+                        elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mFloorMapJSON[i].UserDisplay + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "','" + mFloorMapJSON[i].DeptName + "')");
                     }
 
                 }
@@ -561,7 +567,7 @@
                     if (mFloorMapJSON[i].Id == vId) {
 
                         var mName = (mFloorMapJSON[i].UserDisplay != undefined
-                                        && mFloorMapJSON[i].UserDisplay != "") ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
+                            && mFloorMapJSON[i].UserDisplay != "") ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
 
                         $("#spUserName").text(mName);
 
@@ -604,11 +610,15 @@
             if (vWidth != "" && vWidth != undefined)
                 mWidth = vWidth;
 
-            if (vHeight == "" && vHeight != undefined)
+            if (vHeight != "" && vHeight != undefined)
                 mHeight = vHeight;
 
             $("#txtWidth").val(mWidth);
+
+            $("#spHeight").text(mHeight);
             $("#txtHeight").val(mHeight);
+            $("#txtHeight").attr("style", "display:none");
+            $("#hiddHeight").val(mHeight);
 
             $("#txtSeatId").val(vSeatId);
             $("#txtSeatDtls").val(vSeatDtls);
@@ -623,11 +633,11 @@
             $("#dvChairDtls").modal('show');
         }
 
-        function showPopup(vIndex, vName, vUserTitle, vProfPicPath) {
+        function showPopup(vIndex, vName, vUserTitle, vProfPicPath, vDeptName) {
 
             if (vName != "") {
 
-                vName = vUserTitle + " " + vName;
+                vName = vDeptName + " " + vUserTitle + " " + vName;
 
                 $("#spUserNameDtls").text(vName);
 
@@ -638,20 +648,7 @@
 
                 $("#dvUserDtls").modal('show');
             }
-
-            //var CurrentX = CurrentX - 30;
-            //var popup = document.createElement('div');
-            //popup.id = "popup";
-            //popup.innerHTML = vName;
-            //popup.setAttribute("style", "position:absolute;width:" + vWidth.toString() + "px;height:" + vHeight.toString() + "px;left:" + CurrentX + "px;top:" + CurrentY + "px;display:block;border-style: solid;padding:2px 4px;");
-            ////popup.style.display = "block";
-            //document.getElementById('dvControls').appendChild(popup);
         }
-
-        //function hidePopup() {
-        //    var popup = document.getElementById("popup");
-        //    popup.style.display = "none";
-        //}
 
     </script>
 

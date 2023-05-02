@@ -55,12 +55,12 @@ namespace SMSApp.Controllers
         {
             try
             {
-                if (User.GetRoleCode().ToString() == "SystemAdm" && vFloorSC.ControllerId == null)
+                if (User.GetRoleCode().ToString() == "SystemAdm" && (vFloorSC.ControllerId == null || vFloorSC.ControllerId == "0"))
                 {
                     return Json(new
                     {
                         IsSuccess = "N",
-                        ErrorMessage = "The '詳細' Field is required"
+                        ErrorMessage = "The '管理部門' Field is required"
                     });
                 }
 

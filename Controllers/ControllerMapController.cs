@@ -36,6 +36,7 @@ namespace SMSApp.Controllers
             return View("ControllerMapList");
         }
 
+        //For new Controller Mapping
         [HttpGet]
         public ActionResult New()
         {
@@ -45,6 +46,7 @@ namespace SMSApp.Controllers
             return View("ControllerMapForm", mControllerMapSC);
         }
 
+        //Save Controller Mapping
         [HttpPost]
         public IActionResult SaveControllerMap(ControllerMapSC vControllerMapSC)
         {
@@ -73,6 +75,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        //View Controller Mapping
         [HttpPost]
         public IActionResult ViewControllerMapList()
         {
@@ -86,6 +89,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        //Edit Controller Mapping
         [HttpGet]
         public ActionResult Edit(String id)
         {
@@ -100,6 +104,7 @@ namespace SMSApp.Controllers
             return View("ControllerMapForm", mControllerMapSC);
         }
 
+        //Get All Floor List
         [HttpPost]
         public IActionResult GetAllFloor()
         {

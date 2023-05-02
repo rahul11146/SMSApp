@@ -280,6 +280,8 @@ namespace SMSApp.Models.DAL
                         mFloorMapSC.BGColor = mDrow["BGColor"].ToString();
                         mFloorMapSC.IsBooked = mDrow["IsBooked"].ToString();
 
+                        mFloorMapSC.DeptName = mDrow["DeptName"].ToString();
+
                         mFloorMapSC.UserDisplay = mDrow["UserDisplay"].ToString();
                         mFloorMapSC.UserTitle = mDrow["UserTitle"].ToString();
                         mFloorMapSC.ProfilePhotoPath = mDrow["ProfilePhotoPath"].ToString();

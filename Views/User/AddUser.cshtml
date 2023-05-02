@@ -2,6 +2,9 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string? mActionName = ViewContext.RouteData.Values["action"].ToString();
+
 }
 
 <script src="~/js/appjs/user/userform.js"></script>
@@ -220,19 +223,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-6 col-lg-6">
-                            <div class="form-group">
-                                <label class="form-label">ホームマップの選択</label>
-                                <div class="controls">
-                                    <select id="ddlHomeMap" class="form-control ddlSelect2Single" ng-model="MapId" onchange="OnMapFloorSel();" on-Finish-Render>
-                                        <option ng-value="'0'">--Select--</option>
-                                        <option ng-selected="MapId == item.FloorId" ng-repeat="item in AllMapFloorList" ng-value="item.FloorId">
-                                            {{item.FloorName}}
-                                        </option>
-                                    </select>
+                        @if (mActionName != "New")
+                        {
+                            <div class="col-6 col-md-6 col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label">ホームマップの選択</label>
+                                    <div class="controls">
+                                        <select id="ddlHomeMap" class="form-control ddlSelect2Single" ng-model="MapId" onchange="OnMapFloorSel();" on-Finish-Render>
+                                            <option ng-value="'0'">--Select--</option>
+                                            <option ng-selected="MapId == item.FloorId" ng-repeat="item in AllMapFloorList" ng-value="item.FloorId">
+                                                {{item.FloorName}}
+                                            </option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-9 col-lg-8 padding-bottom-30">
