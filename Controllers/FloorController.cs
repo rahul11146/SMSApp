@@ -40,6 +40,7 @@ namespace SMSApp.Controllers
             return View("FloorList");
         }
 
+        // New Floor Addition
         [HttpGet]
         public ActionResult New()
         {
@@ -50,6 +51,7 @@ namespace SMSApp.Controllers
             return View("FloorForm", mFloorSC);
         }
 
+        // Save Floor
         [HttpPost]
         public IActionResult SaveFloorData(FloorSC vFloorSC)
         {
@@ -120,6 +122,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        //Save Floor Mapping
         [HttpPost]
         public IActionResult SaveMapFloor(FloorMapSC vFloorMapSC)
         {
@@ -140,6 +143,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        //View Floor List
         [HttpPost]
         public IActionResult ViewFloorList(string vIsActive)
         {
@@ -153,6 +157,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        //Update Floor List
         [HttpGet]
         public ActionResult Edit(String id)
         {
@@ -167,6 +172,7 @@ namespace SMSApp.Controllers
             return View("AddUser", mUserSC);
         }
 
+        //Update Floor List
         [HttpGet]
         public ActionResult EditFloor(String id)
         {
@@ -184,6 +190,7 @@ namespace SMSApp.Controllers
             return View("FloorForm", mFloorSC);
         }
 
+        //Edit Floor Map List
         [HttpGet]
         public ActionResult EditMapFloor(String id, string FloorMapId, string vType)
         {

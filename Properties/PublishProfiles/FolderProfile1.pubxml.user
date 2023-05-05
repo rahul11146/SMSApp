@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Apps\Seat Management System\SMSApplication\_Release</_PublishTargetUrl>
+    <History>True|2023-05-04T20:58:51.6083370Z;True|2023-05-04T11:09:34.6365520+05:30;True|2023-05-04T10:15:56.9998848+05:30;True|2023-05-03T02:45:16.2611237+05:30;True|2023-05-03T02:44:54.4876624+05:30;True|2023-05-03T02:33:11.0842488+05:30;True|2023-05-03T02:29:05.0112006+05:30;True|2023-05-03T02:16:51.4331125+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

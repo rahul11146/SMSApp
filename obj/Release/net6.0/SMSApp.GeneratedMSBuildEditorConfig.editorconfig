@@ -9,101 +9,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SMSApp
 build_property.RootNamespace = SMSApp
-build_property.ProjectDir = D:\Apps\Seat Management System\SMSApp\
+build_property.ProjectDir = D:\Apps\Seat Management System\SMSApplication\SMSApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = D:\Apps\Seat Management System\SMSApp
+build_property.MSBuildProjectDirectory = D:\Apps\Seat Management System\SMSApplication\SMSApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/ControllerMap/ControllerMapForm.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/ControllerMap/ControllerMapForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJvbGxlck1hcFxDb250cm9sbGVyTWFwRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/ControllerMap/ControllerMapList.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/ControllerMap/ControllerMapList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udHJvbGxlck1hcFxDb250cm9sbGVyTWFwTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Floor/FloorForm.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Floor/FloorForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JcRmxvb3JGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Floor/FloorList.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Floor/FloorList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JcRmxvb3JMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Floor/FloorMap.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Floor/FloorMap.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxvb3JcRmxvb3JNYXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Home/Index.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Home/Privacy.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Login/Login.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Roles/AddRole.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Roles/AddRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQWRkUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Roles/RolesList.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Roles/RolesList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcUm9sZXNMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/SeatBook/SeatBookList.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/SeatBook/SeatBookList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhdEJvb2tcU2VhdEJvb2tMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/SeatBook/SeatBookSearch.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/SeatBook/SeatBookSearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhdEJvb2tcU2VhdEJvb2tTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Shared/Error.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Shared/GridView/_GridPager.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Shared/GridView/_GridPager.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEdyaWRWaWV3XF9HcmlkUGFnZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/UserAccess/UserAccessForm.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/UserAccess/UserAccessForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY2Vzc1xVc2VyQWNjZXNzRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/UserAccess/UserAccessList.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/UserAccess/UserAccessList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY2Vzc1xVc2VyQWNjZXNzTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/User/AddUser.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/User/AddUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/User/UsersList.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/User/UsersList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2Vyc0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/_ViewImports.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/_ViewStart.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Apps/Seat Management System/SMSApp/Views/Shared/_Layout - Copy.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Shared/_Layout - Copy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQgLSBDb3B5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-z49f47v1pe
 
-[D:/Apps/Seat Management System/SMSApp/Views/Shared/_Layout.cshtml]
+[D:/Apps/Seat Management System/SMSApplication/SMSApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-x1ntx18hfb

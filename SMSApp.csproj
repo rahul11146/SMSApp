@@ -7,10 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Resx\**" />
-	  <Content Remove="Resx\**" />
-	  <EmbeddedResource Remove="Resx\**" />
-	  <None Remove="Resx\**" />
+		<Compile Remove="Resx\**" />
+		<Content Remove="Resx\**" />
+		<EmbeddedResource Remove="Resx\**" />
+		<None Remove="Resx\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -27,5 +27,6 @@
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
 	</ItemGroup>
+
 
 </Project>

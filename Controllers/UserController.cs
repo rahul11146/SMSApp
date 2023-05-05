@@ -158,7 +158,7 @@ namespace SMSApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult GetAllMapFloor()
+        public IActionResult GetAllMapFloor(string vUserId)
         {
             UserBLL mUserBLL = null;
             DataSet mDset = null;
@@ -166,6 +166,11 @@ namespace SMSApp.Controllers
 
             mUserBLL = new UserBLL();
             vCurrUsrId = User.GetUserId();
+
+            if (User.GetRoleCode() == "SystemAdm")
+            {
+                vCurrUsrId = vUserId;
+            }
 
             mDset = mUserBLL.GetAllMapFloor(vCurrUsrId, Configuration);
 

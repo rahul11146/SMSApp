@@ -90,17 +90,22 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 
 	$scope.GetAllHomeMapFloor = function () {
 
-		$http.post("/User/GetAllMapFloor",
-			{
-			}
-		).then(function (resp) {
+		var mData = { 'vUserId': mUserId };
 
-			var mData = JSON.parse(resp.data);
+		$http({
+			method: "POST",
+			url: "/User/GetAllMapFloor",
+			params: mData
+		}).then(function mySuccess(response) {
+
+			var mData = JSON.parse(response.data);
 
 			$scope.AllMapFloorList = mData.Table;
 
-		}, function (data) {
+		}, function myError(response) {
+			alert(response.statusText);
 		});
+
 	}
 
 	$scope.GetAllHomeMapFloor();

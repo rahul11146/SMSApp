@@ -5,7 +5,13 @@
 
     string? mActionName = ViewContext.RouteData.Values["action"].ToString();
 
+    string? mUserId = ViewContext.RouteData.Values["Id"].ToString();
+
 }
+
+<script type="text/javascript">
+    var mUserId = '@mUserId';
+</script>
 
 <script src="~/js/appjs/user/userform.js"></script>
 

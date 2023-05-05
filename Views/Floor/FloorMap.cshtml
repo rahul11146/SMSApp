@@ -188,13 +188,7 @@
                                         <span class="text text-danger">*</span>
                                     </label>
                                     <div class="controls">
-
-                                        <span id="spHeight"></span>
-
                                         @Html.TextBoxFor(model => model.height, new { @id="txtHeight", @class = "form-control", @placeholder = "縦", @autocomplete = "off",@value="15" })
-
-                                        @Html.HiddenFor(model => model.height, new { @id="hiddHeight"})
-
                                         <div class="text-danger">
                                             @Html.ValidationMessageFor(model => model.height)
                                         </div>
@@ -524,14 +518,15 @@
 
                 if (mType === "BS") {
 
-                    if (mIsCreatedUsr == "Y" || mFloorMapJSON[i].CreatedBy == "0"
-                        || '@mRoleName' == "FloorAdmin" || '@mRoleName' == "SystemAdmn") {
-
+                    if (mIsCreatedUsr == "Y" || mFloorMapJSON[i].CreatedBy == "0") {
                         elemDiv.setAttribute("onclick", "BookSeat(" + mFloorMapJSON[i].Id + ",'" + mIsCreatedUsr + "')");
-
                     }
                     else if (mIsCreatedUsr == "N") {
                         elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mFloorMapJSON[i].UserDisplay + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "','" + mFloorMapJSON[i].DeptName + "')");
+                    }
+
+                    if ('@mRoleName' == "FloorAdmin" || '@mRoleName' == "SystemAdm") {
+                        elemDiv.setAttribute("onclick", "BookSeat(" + mFloorMapJSON[i].Id + ",'" + mIsCreatedUsr + "')");
                     }
 
                 }
@@ -566,8 +561,8 @@
 
                     if (mFloorMapJSON[i].Id == vId) {
 
-                        var mName = (mFloorMapJSON[i].UserDisplay != undefined
-                            && mFloorMapJSON[i].UserDisplay != "") ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
+                        var mName = (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != "")
+                            ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
 
                         $("#spUserName").text(mName);
 
@@ -614,11 +609,7 @@
                 mHeight = vHeight;
 
             $("#txtWidth").val(mWidth);
-
-            $("#spHeight").text(mHeight);
             $("#txtHeight").val(mHeight);
-            $("#txtHeight").attr("style", "display:none");
-            $("#hiddHeight").val(mHeight);
 
             $("#txtSeatId").val(vSeatId);
             $("#txtSeatDtls").val(vSeatDtls);
@@ -636,10 +627,9 @@
         function showPopup(vIndex, vName, vUserTitle, vProfPicPath, vDeptName) {
 
             if (vName != "") {
+                vName = vDeptName + "<br/>" + vUserTitle + "<br/>" + vName;
 
-                vName = vDeptName + " " + vUserTitle + " " + vName;
-
-                $("#spUserNameDtls").text(vName);
+                $("#spUserNameDtls").html(vName);
 
                 if (vProfPicPath != "") {
                     vProfPicPath = vProfPicPath.replace("~", "..");
