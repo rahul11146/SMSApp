@@ -30,6 +30,7 @@ namespace SMSApp.Controllers
             return View();
         }
 
+        // Get All Seat List
         [HttpGet]
         public ActionResult Index()
         {
@@ -49,12 +50,14 @@ namespace SMSApp.Controllers
             return View("SeatBookList", mSeatBookSC);
         }
 
+        // Open Seat Search Page
         [HttpGet]
         public ActionResult Search()
         {
             return View("SeatBookSearch");
         }
 
+        // Save WFH Users
         [HttpPost]
         public IActionResult SaveWFH(string IsWFH)
         {
@@ -80,6 +83,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        // Checkout functionality
         [HttpPost]
         public IActionResult CheckOut()
         {
@@ -97,6 +101,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        // Seat Book Checkright for IsWFH or not
         [HttpPost]
         public IActionResult SeatBookCheckRights()
         {
@@ -116,6 +121,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        // Get All Seat Search List
         [HttpPost]
         public IActionResult SeatSearchList(string vLastName, string vFirstName, string vFloorId, string vDeptId,string vSrchType)
         {
@@ -153,6 +159,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // View  SeatBook List
         [HttpPost]
         public IActionResult ViewSeatBookList()
         {

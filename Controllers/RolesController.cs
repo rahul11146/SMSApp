@@ -35,12 +35,14 @@ namespace SMSApp.Controllers
 			return View("RolesList");
 		}
 
+		// New Role Page
         [HttpGet]
         public ActionResult New()
         {
             return View("AddRole");
         }
 
+		// Save Role Page
         [HttpPost]
 		public IActionResult SaveRole(RolesSC vRolesSC)
 		{
@@ -58,6 +60,7 @@ namespace SMSApp.Controllers
 			});
 		}
 
+		// Get All Roles List
         [HttpPost]
         public IActionResult ViewRolesList()
         {

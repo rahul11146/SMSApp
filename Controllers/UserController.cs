@@ -32,13 +32,15 @@ namespace SMSApp.Controllers
             return View();
         }
 
+
+        // All User List
         [HttpGet]
         public ActionResult Index()
         {
-
             return View("UsersList");
         }
 
+        // Redirect to New Users Page
         [HttpGet]
         public ActionResult New()
         {
@@ -49,6 +51,7 @@ namespace SMSApp.Controllers
             return View("AddUser", mUserSC);
         }
 
+        // Save and Update new Users
         [HttpPost]
         public IActionResult SaveUser(UserSC vUserSC)
         {
@@ -86,6 +89,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        // View Users List
         [HttpPost]
         public IActionResult ViewUserList()
         {
@@ -101,6 +105,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Redirect to Edit User Page
         [HttpGet]
         public ActionResult Edit(String id, string PageType)
         {
@@ -116,6 +121,7 @@ namespace SMSApp.Controllers
             return View("AddUser", mUserSC);
         }
 
+        // Get All Roles List on User page
         [HttpPost]
         public IActionResult GetAllRoles()
         {
@@ -129,6 +135,8 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+
+        // Get All Department List on User page
         [HttpPost]
         public IActionResult GetAllDepartment()
         {
@@ -142,6 +150,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Get All Floor List on User page
         [HttpPost]
         public IActionResult GetAllFloor()
         {
@@ -157,6 +166,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Get All Home Map Floor
         [HttpPost]
         public IActionResult GetAllMapFloor(string vUserId)
         {
@@ -181,12 +191,6 @@ namespace SMSApp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        [HttpGet]
-        public ActionResult Test()
-        {
-            return View("Test");
         }
     }
 }

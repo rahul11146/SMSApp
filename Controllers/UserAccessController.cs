@@ -30,12 +30,15 @@ namespace SMSApp.Controllers
             return View();
         }
 
+        // All User Access List
         [HttpGet]
         public ActionResult Index()
         {
             return View("UserAccessList");
         }
 
+
+        // Redirect to new User Access Page
         [HttpGet]
         public ActionResult New()
         {
@@ -47,6 +50,7 @@ namespace SMSApp.Controllers
             return View("UserAccessForm", mUserAccessSC);
         }
 
+        // GEt All Users List
         public void FillUsersList()
         {
             SelectList mSelectList = null;
@@ -61,6 +65,7 @@ namespace SMSApp.Controllers
             ViewData["UsersList"] = mSelectList;
         }
 
+        // Save User Access 
         [HttpPost]
         public IActionResult SaveUserAccess(UserAccessSC vUserAccessSC)
         {
@@ -88,6 +93,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        // View User Access List
         [HttpPost]
         public IActionResult ViewUserAccessList()
         {
@@ -101,6 +107,8 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+
+        // Edit User Access List
         [HttpGet]
         public ActionResult Edit(String id)
         {
@@ -115,6 +123,7 @@ namespace SMSApp.Controllers
             return View("UserAccessForm", mUserAccessSC);
         }
 
+        // Get All User List on page
         [HttpPost]
         public IActionResult GetAllUsersList()
         {
@@ -128,6 +137,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Get ALl Floor List on page
         [HttpPost]
         public IActionResult GetAllFloorList(string vType)
         {
@@ -144,6 +154,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Get All Floor
         [HttpPost]
         public IActionResult GetAllFloor()
         {

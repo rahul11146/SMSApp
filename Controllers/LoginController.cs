@@ -70,6 +70,7 @@ namespace SMSApp.Controllers
             return View("Login");
         }
 
+        // Login user with Username and password
         [HttpPost]
         public ActionResult Submit(LoginSC vLoginSC)
         {

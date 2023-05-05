@@ -15,6 +15,7 @@ namespace SMSApp.Controllers
             _logger = logger;
         }
 
+        // Open the Homepage 
         public IActionResult Index()
         {
             return View();
