@@ -1,6 +1,7 @@
 var _UserForm = null;
 var mFlrId;
 var mDeptId;
+var mHomeMapId;
 
 app.controller('UserFormCtrl', function ($scope, $http) {
 
@@ -13,12 +14,16 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 	$scope.FlrId = "0";
 	$scope.DeptId = "0";
 
-	var mRoleId = $("#txtRoleId").val();
+	var mDeptId = $("#txtRoleId").val();
+	var mHomeMapId = $("#txtHomeMapId").val();
 
-	if (mRoleId != undefined & mRoleId != null) {
-		$scope.RoleId = mRoleId;
+	if (mDeptId != undefined && mDeptId != null) {
+		$scope.DeptId = mDeptId;
 	}
-
+	
+	if (mHomeMapId != undefined && mHomeMapId != null) {
+		$scope.MapId = mHomeMapId;
+	}
 
 	$scope.GetAllRoles = function () {
 
@@ -35,8 +40,6 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 		});
 	}
 
-	$scope.GetAllRoles();
-
 	var mFloorId = $("#txtFloor1Id").val();
 
 	if (mFloorId != undefined & mFloorId != null) {
@@ -45,7 +48,7 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 
 	$scope.GetAllFloor = function () {
 
-		$http.post("/ControllerMap/GetAllFloor",
+		$http.post("/User/GetAllFloor",
 			{
 			}
 		).then(function (resp) {
@@ -56,14 +59,6 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 
 		}, function (data) {
 		});
-	}
-	
-	$scope.GetAllFloor();
-
-	var mDeptId = $("#txtDeptId").val();
-
-	if (mDeptId != undefined & mDeptId != null) {
-		$scope.DeptId = mDeptId;
 	}
 
 	$scope.GetAllDepartment = function () {
@@ -77,6 +72,12 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 
 			$scope.DeptList = mData.Table;
 
+			var mDeptId = $("#txtDeptId").val();
+
+			if (mDeptId != undefined && mDeptId != null && mDeptId != "") {
+				$scope.DeptId = mDeptId;
+			}
+
 		}, function (data) {
 		});
 	}
@@ -87,27 +88,41 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 		window.location.href = "/User/Edit/" + vId;
 	}
 
-	$scope.FormFloorList = [];
+	$scope.GetAllHomeMapFloor = function () {
 
-	$scope.AddFloor = function () {
+		var mData = { 'vUserId': mUserId };
 
-		var mFloorId = $("#ddlFloor option:selected").val();
-		var mFloorName = $("#ddlFloor option:selected").text();
+		$http({
+			method: "POST",
+			url: "/User/GetAllMapFloor",
+			params: mData
+		}).then(function mySuccess(response) {
 
-		$scope.FormFloorList.push({
-			FloorId: mFloorId,
-			FloorName: mFloorName,
-			IsType: "N"
+			var mData = JSON.parse(response.data);
+
+			$scope.AllMapFloorList = mData.Table;
+
+		}, function myError(response) {
+			alert(response.statusText);
 		});
+
 	}
+
+	$scope.GetAllHomeMapFloor();
 
 });
 
 function SaveUser() {
 
-	$("#txtRoleId").val(_UserForm.RoleId);
-	$("#txtFloor1Id").val(mFlrId);
+	//$("#txtRoleId").val(_UserForm.RoleId);
+	//$("#txtFloor1Id").val(mFlrId);
+
 	$("#txtDeptId").val(mDeptId);
+	$("#txtHomeMapId").val(mHomeMapId);
+
+	//if (_UserForm.FormFloorList != undefined && _UserForm.FormFloorList.length > 0) {
+	//	$("#txtFloorSelect").val(JSON.stringify(_UserForm.FormFloorList));
+	//}
 
 	return true;
 }
@@ -118,4 +133,8 @@ function OnFlrSel() {
 
 function OnDeptSel() {
 	mDeptId = $("#ddlDept option:selected").val().split(':')[1];
+}
+
+function OnMapFloorSel() {
+	mHomeMapId = $("#ddlHomeMap option:selected").val().split(':')[1];
 }

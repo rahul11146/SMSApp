@@ -136,15 +136,12 @@
                         <div class="form-group">
                             @*<label class="form-label title">フロア名</label>*@
                             <div class="controls" id="dvControls" style="margin-top:-15px">
-
                                 <img id="myImgId" src="@Url.Content(Model.ImagePath)" />
 
                                 @*<div id="dv_1" onclick="BookSeat(24,'15','20','','undefined','undefined','293','246')" style="position: absolute; width: 15px; height: 20px; background: rgba(220, 20, 60, 0.4);">
                                 <span style="position: absolute; width: 30px; height: 20px;  font-weight: bolder;color:black;"> 太郎</span>
                                 </div>*@
-
-                                @*<div id="rectangle" onmouseover="showPopup()" onmouseout="hidePopup()" onclick="handleClick()">Click Me</div>
-                                *@
+                                @*<div id="rectangle" onmouseover="showPopup()" onmouseout="hidePopup()" onclick="handleClick()">Click Me</div>*@
                             </div>
                         </div>
                     </div>
@@ -200,11 +197,11 @@
                             <div class="col-6 col-md-6 col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label">
-                                        座席ID
+                                        座席名
                                         <span class="text text-danger">*</span>
                                     </label>
                                     <div class="controls">
-                                        @Html.TextBoxFor(model => model.SeatID, new { @id="txtSeatId",@class = "form-control", @placeholder = "座席ID", @autocomplete = "off" })
+                                        @Html.TextBoxFor(model => model.SeatID, new { @id="txtSeatId",@class = "form-control", @placeholder = "座席名", @autocomplete = "off" })
                                         <div class="text-danger">
                                             @Html.ValidationMessageFor(model => model.SeatID)
                                         </div>
@@ -393,7 +390,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <div class="row" ng-if="AllWFHUsersUnderHM.length > 0">
+                    <div class="row">
                         <div class="col-12">
                             <table id="tblAllWFHUsersUnderHM" class="display table table-hover table-condensed tblAllWFHUsersUnderHM" cellspacing="0" width="100%">
                                 <thead>
@@ -404,15 +401,20 @@
                                 </thead>
                                 <tbody>
                                     <tr dir-paginate="item in AllWFHUsersUnderHM | orderBy: 'RowId' | itemsPerPage: pageSize | record:'currentPage':this"
-                                        pagination-id="tblAllWFHUsersUnderHM">
+                                        pagination-id="tblAllWFHUsersUnderHM" ng-if="AllWFHUsersUnderHM.length > 0">
                                         <td ng-bind="item.RowId"></td>
                                         <td ng-bind="item.Name"></td>
                                     </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <span class="text text-danger">該当する情報はありません。</span>
+                                        </td>
+                                    </tr>
                                 </tbody>
-                                <tfoot>
+                                <tfoot >
                                     <tr>
                                         <td colspan="3">
-                                            <div class="text-center pull-right">
+                                            <div class="text-center pull-right" ng-if="AllWFHUsersUnderHM.length > 0">
                                                 <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
                                                                          template-url="@Url.Content("~/dirpagination.tpl.html")"
                                                                          pagination-id="tblAllWFHUsersUnderHM">

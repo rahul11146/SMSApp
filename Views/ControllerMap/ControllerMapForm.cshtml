@@ -59,7 +59,7 @@
                                     <span class="text text-danger">*</span>
                                 </label>
                                 <div class="controls">
-                                    @Html.TextBoxFor(model => model.ControllerName, new { @class = "form-control", @placeholder = "Enter Controller Name", @autocomplete = "off" })
+                                    @Html.TextBoxFor(model => model.ControllerName, new { @class = "form-control", @placeholder = "管理部門名を入力", @autocomplete = "off" })
                                     <div class="text-danger">
                                         @Html.ValidationMessageFor(model => model.ControllerName)
                                     </div>
@@ -73,7 +73,7 @@
                                     <span class="text text-danger">*</span>
                                 </label>
                                 <div class="controls">
-                                    @Html.TextBoxFor(model => model.ControllerDesc, new { @class = "form-control", @placeholder = "Enter Controller Description", @autocomplete = "off" })
+                                    @Html.TextBoxFor(model => model.ControllerDesc, new { @class = "form-control", @placeholder = "管理部門詳細を入力", @autocomplete = "off" })
                                     <div class="text-danger">
                                         @Html.ValidationMessageFor(model => model.ControllerDesc)
                                     </div>

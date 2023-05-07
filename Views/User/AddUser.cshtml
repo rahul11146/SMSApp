@@ -5,7 +5,9 @@
 
     string? mActionName = ViewContext.RouteData.Values["action"].ToString();
 
-    string? mUserId = ViewContext.RouteData.Values["Id"].ToString();
+    string? mUserId = string.Empty;
+
+    mUserId = ViewContext.RouteData.Values["Id"] == null ? "0" : ViewContext.RouteData.Values["Id"].ToString();
 
 }
 
