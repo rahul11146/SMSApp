@@ -1,823 +1,827 @@
 {
   "Files": [
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\SMSApp.bundle.scp.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\SMSApp.bundle.scp.css",
       "PackagePath": "staticwebassets\\SMSApp.bundle.scp.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\ErrorLog.txt",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\ErrorLog.txt",
       "PackagePath": "staticwebassets\\ErrorLog.txt"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Pagination\\script.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Pagination\\script.js",
       "PackagePath": "staticwebassets\\Pagination\\script.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Pagination\\style.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Pagination\\style.css",
       "PackagePath": "staticwebassets\\Pagination\\style.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\BG.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\BG.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\BG.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\Images.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\Images.jpg",
       "PackagePath": "staticwebassets\\Resx\\Images\\Images.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\Images.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\Images.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\Images.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\ImagesV1.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\ImagesV1.jpg",
       "PackagePath": "staticwebassets\\Resx\\Images\\ImagesV1.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\blank-user-img.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\blank-user-img.jpg",
       "PackagePath": "staticwebassets\\Resx\\Images\\blank-user-img.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\images_New.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\images_New.jpg",
       "PackagePath": "staticwebassets\\Resx\\Images\\images_New.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo - Copy (2).png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo - Copy (2).png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo - Copy (2).png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo - Copy - Copy.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo - Copy - Copy.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo - Copy - Copy.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo - Copy.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo - Copy.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo - Copy.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo - Copy1.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo - Copy1.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo - Copy1.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo - Copy2.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo - Copy2.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo - Copy2.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo_V1 - Copy.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo_V1 - Copy.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo_V1 - Copy.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo_V1.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo_V1.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo_V1.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi-logo_old.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi-logo_old.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi-logo_old.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\wi.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\wi.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\wi.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Images\\writer-information.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Images\\writer-information.png",
       "PackagePath": "staticwebassets\\Resx\\Images\\writer-information.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Paginate\\dirPagination.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Paginate\\dirPagination.js",
       "PackagePath": "staticwebassets\\Resx\\Paginate\\dirPagination.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Scripts\\jquery-1.8.2.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Scripts\\jquery-1.8.2.min.js",
       "PackagePath": "staticwebassets\\Resx\\Scripts\\jquery-1.8.2.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Scripts\\jquery.unobtrusive-ajax.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Scripts\\jquery.unobtrusive-ajax.js",
       "PackagePath": "staticwebassets\\Resx\\Scripts\\jquery.unobtrusive-ajax.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Scripts\\jquery.unobtrusive-ajax.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Scripts\\jquery.unobtrusive-ajax.min.js",
       "PackagePath": "staticwebassets\\Resx\\Scripts\\jquery.unobtrusive-ajax.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\Style1.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\Style1.css",
       "PackagePath": "staticwebassets\\Resx\\Style1.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\_app.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\_app.js",
       "PackagePath": "staticwebassets\\Resx\\_app.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\bootstrap.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\Resx\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\css\\animate.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\css\\animate.min.css",
       "PackagePath": "staticwebassets\\Resx\\css\\animate.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\css\\bootstrap-datepicker3.standalone.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\css\\bootstrap-datepicker3.standalone.min.css",
       "PackagePath": "staticwebassets\\Resx\\css\\bootstrap-datepicker3.standalone.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\css\\font-awesome.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\Resx\\css\\font-awesome.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\css\\perfect-scrollbar.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\css\\perfect-scrollbar.css",
       "PackagePath": "staticwebassets\\Resx\\css\\perfect-scrollbar.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\css\\select2.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\css\\select2.min.css",
       "PackagePath": "staticwebassets\\Resx\\css\\select2.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\css\\style.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\css\\style.css",
       "PackagePath": "staticwebassets\\Resx\\css\\style.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\css\\sweetalert.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\css\\sweetalert.css",
       "PackagePath": "staticwebassets\\Resx\\css\\sweetalert.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\fonts\\FontAwesome.otf",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\Resx\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\fonts\\fontawesome-webfont.eot",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\Resx\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\fonts\\fontawesome-webfont.svg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\Resx\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\fonts\\fontawesome-webfont.ttf",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\Resx\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\fonts\\fontawesome-webfont.woff",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\Resx\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\fonts\\fontawesome-webfont.woff2",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\Resx\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\angular.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\angular.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\angular.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\angularjs-dropdown-multiselect.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\angularjs-dropdown-multiselect.js",
       "PackagePath": "staticwebassets\\Resx\\js\\angularjs-dropdown-multiselect.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\bootstrap-datepicker.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\bootstrap-datepicker.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\bootstrap-datepicker.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\bootstrap.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\buttons.flash.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\buttons.flash.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\buttons.flash.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\buttons.html5.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\buttons.html5.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\buttons.html5.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\buttons.print.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\buttons.print.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\buttons.print.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\dataTables.buttons.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\dataTables.buttons.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\dataTables.buttons.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\jquery-1.11.2.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\jquery-1.11.2.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\jquery-1.11.2.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\jquery-3.2.1.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\jquery-3.2.1.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\jquery-3.2.1.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\jquery.easing.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\jquery.easing.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\jquery.easing.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\jquery.unobtrusive-ajax.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\jquery.unobtrusive-ajax.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\jquery.unobtrusive-ajax.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\jquery.validate.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\jszip.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\jszip.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\jszip.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\pace.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\pace.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\pace.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\pdfmake.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\pdfmake.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\pdfmake.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\perfect-scrollbar.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\perfect-scrollbar.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\perfect-scrollbar.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\popper.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\popper.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\popper.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\scripts.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\scripts.js",
       "PackagePath": "staticwebassets\\Resx\\js\\scripts.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\select2.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\select2.min.js",
       "PackagePath": "staticwebassets\\Resx\\js\\select2.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\sweetalert-dev.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\sweetalert-dev.js",
       "PackagePath": "staticwebassets\\Resx\\js\\sweetalert-dev.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\vfs_fonts.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\vfs_fonts.js",
       "PackagePath": "staticwebassets\\Resx\\js\\vfs_fonts.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Resx\\js\\viewportchecker.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Resx\\js\\viewportchecker.js",
       "PackagePath": "staticwebassets\\Resx\\js\\viewportchecker.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage7.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage7.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage7.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\01 - AdminScreenShot.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\01 - AdminScreenShot.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\01 - AdminScreenShot.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\01.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\01.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\01.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\02 - Homescreen.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\02 - Homescreen.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\02 - Homescreen.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\03 - UserList.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\03 - UserList.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\03 - UserList.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\1.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\1.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\1.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\10.PNG",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\10.PNG",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\10.PNG"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\11.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\11.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\11.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\12.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\12.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\12.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\13.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\13.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\13.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\13.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\13.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\13.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\14.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\14.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\14.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\14.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\14.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\14.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\15.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\15.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\15.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\15.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\15.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\15.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\16.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\16.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\16.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\16.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\16.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\16.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\17.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\17.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\17.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\17.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\17.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\17.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\18.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\18.jpg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\18.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\18.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\18.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\18.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\19.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\19.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\19.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\19.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\19.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\19.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\2.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\2.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\2.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\20.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\20.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\20.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\20.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\20.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\20.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\21.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\21.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\21.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\21.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\21.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\21.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\22.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\22.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\22.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\22.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\22.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\22.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\23.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\23.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\23.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\23.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\23.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\23.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\24.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\24.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\24.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\24.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\24.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\24.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\25.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\25.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\25.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\25.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\25.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\25.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\26.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\26.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\26.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\26.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\26.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\26.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\27.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\27.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\27.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\27.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\27.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\27.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\28.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\28.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\28.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\29.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\29.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\29.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\3.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\3.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\3.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\30.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\30.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\30.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\31.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\31.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\31.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\32.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\32.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\32.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\34.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\34.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\34.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\4.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\4.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\4.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\40.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\40.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\40.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\41.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\41.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\41.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\48.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\48.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\48.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\5.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\5.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\5.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\51.jpeg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\51.jpeg",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\51.jpeg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\8.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\8.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\8.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\9.PNG",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\9.PNG",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\9.PNG"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\HQ_6F.PNG",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\HQ_6F.PNG",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\HQ_6F.PNG"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-10 105706.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-10 105706.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\Screenshot 2023-03-10 105706.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-10 105719.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-10 105719.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\Screenshot 2023-03-10 105719.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-10 105841.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-10 105841.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\Screenshot 2023-03-10 105841.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-15 113431.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-15 113431.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\Screenshot 2023-03-15 113431.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-17 100309.png",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-17 100309.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\Screenshot 2023-03-17 100309.png"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\ProfileImage\\10.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\ProfileImage\\10.jpg",
       "PackagePath": "staticwebassets\\Uploads\\ProfileImage\\10.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\ProfileImage\\13.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\ProfileImage\\11.png",
+      "PackagePath": "staticwebassets\\Uploads\\ProfileImage\\11.png"
+    },
+    {
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\ProfileImage\\13.jpg",
       "PackagePath": "staticwebassets\\Uploads\\ProfileImage\\13.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\ProfileImage\\14.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\ProfileImage\\14.jpg",
       "PackagePath": "staticwebassets\\Uploads\\ProfileImage\\14.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Uploads\\ProfileImage\\4.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\ProfileImage\\4.jpg",
       "PackagePath": "staticwebassets\\Uploads\\ProfileImage\\4.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\Users.jpg",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Users.jpg",
       "PackagePath": "staticwebassets\\Users.jpg"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\css\\site.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\dirPagination.tpl.html",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\dirPagination.tpl.html",
       "PackagePath": "staticwebassets\\dirPagination.tpl.html"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\favicon.ico",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\ControllerMap\\ControllerMapForm.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\ControllerMap\\ControllerMapForm.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\ControllerMap\\ControllerMapForm.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\ControllerMap\\ControllerMapView.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\ControllerMap\\ControllerMapView.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\ControllerMap\\ControllerMapView.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\Floor\\FloorForm.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\Floor\\FloorForm.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\Floor\\FloorForm.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\Floor\\FloorMapForm.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\Floor\\FloorMapForm.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\Floor\\FloorMapForm.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\Floor\\FloorView.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\Floor\\FloorView.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\Floor\\FloorView.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\Login\\Login.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\Login\\Login.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\Login\\Login.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\Role\\RoleView.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\Role\\RoleView.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\Role\\RoleView.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\SeatBook\\SeatBookSearch.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\SeatBook\\SeatBookSearch.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\SeatBook\\SeatBookSearch.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\SeatBook\\SeatBookView.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\SeatBook\\SeatBookView.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\SeatBook\\SeatBookView.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\UserAccess\\UserAccessForm.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\UserAccess\\UserAccessForm.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\UserAccess\\UserAccessForm.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\UserAccess\\UserAccessView.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\UserAccess\\UserAccessView.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\UserAccess\\UserAccessView.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\User\\UserForm.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\User\\UserForm.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\User\\UserForm.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\AppJs\\User\\UserView.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\AppJs\\User\\UserView.js",
       "PackagePath": "staticwebassets\\js\\AppJs\\User\\UserView.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\js\\site.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\AbhsihSMSApp\\SMSAPP\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

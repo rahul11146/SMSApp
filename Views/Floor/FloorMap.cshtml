@@ -286,7 +286,7 @@
                                 <div class="form-group">
                                     <label class="form-label">プロフィール写真</label>
                                     <div class="controls">
-                                        <img id="ImgUserDtls" src="~/users.jpg" width="100px" height="100px" />
+                                        <img id="spImgUserDtls" src="~/users.jpg" width="100px" height="100px" />
                                     </div>
                                 </div>
                             </div>
@@ -405,13 +405,13 @@
                                         <td ng-bind="item.RowId"></td>
                                         <td ng-bind="item.Name"></td>
                                     </tr>
-                                    <tr>
+                                    <tr ng-if="AllWFHUsersUnderHM.length == 0">
                                         <td colspan="2">
                                             <span class="text text-danger">該当する情報はありません。</span>
                                         </td>
                                     </tr>
                                 </tbody>
-                                <tfoot >
+                                <tfoot>
                                     <tr>
                                         <td colspan="3">
                                             <div class="text-center pull-right" ng-if="AllWFHUsersUnderHM.length > 0">
@@ -566,10 +566,19 @@
                         var mName = (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != "")
                             ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
 
-                        $("#spUserName").text(mName);
+                        if (mName != "" && mName != undefined) {
+                            mName = mFloorMapJSON[i].DeptName + "<br/>" + mFloorMapJSON[i].UserTitle + "<br/>" + mName;
+                        }
 
-                        if (mFloorMapJSON[i].ProfilePhotoPath != "" && mFloorMapJSON[i].ProfilePhotoPath != undefined)
-                            $("#ImgUserDtls").attr("src", mFloorMapJSON[i].ProfilePhotoPath);
+                        $("#spUserName").html(mName);
+
+                        if (mFloorMapJSON[i].ProfilePhotoPath != "" && mFloorMapJSON[i].ProfilePhotoPath != undefined) {
+                            var mPhoto = mFloorMapJSON[i].ProfilePhotoPath;
+
+                            mPhoto = mPhoto.replace("~", "..");
+
+                            $("#spImgUserDtls").attr("src", mPhoto);
+                        }
 
                         $("#spSeatId").text(mFloorMapJSON[i].SeatID);
                         $("#spSeatDetails").text(mFloorMapJSON[i].SeatDetails);

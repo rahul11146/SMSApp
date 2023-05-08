@@ -14,7 +14,7 @@ app.controller('UserFormCtrl', function ($scope, $http) {
 	$scope.FlrId = "0";
 	$scope.DeptId = "0";
 
-	var mDeptId = $("#txtRoleId").val();
+	var mDeptId = $("#txtDeptId").val();
 	var mHomeMapId = $("#txtHomeMapId").val();
 
 	if (mDeptId != undefined && mDeptId != null) {
@@ -116,6 +116,8 @@ function SaveUser() {
 
 	//$("#txtRoleId").val(_UserForm.RoleId);
 	//$("#txtFloor1Id").val(mFlrId);
+
+
 
 	$("#txtDeptId").val(mDeptId);
 	$("#txtHomeMapId").val(mHomeMapId);
