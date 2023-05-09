@@ -35,7 +35,7 @@ namespace SMSApp.Models.DAL
                 mDbCommand = CurrentDataBase.GetStoredProcCommand(StoredProcedures.spr_Floor_Save);
 
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorId", DbType.String, vUserSC.FloorId);
-                CurrentDataBase.AddInParameter(mDbCommand, "@vControllerId", DbType.String, vUserSC.ControllerId);
+                //CurrentDataBase.AddInParameter(mDbCommand, "@vControllerId", DbType.String, vUserSC.ControllerId);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorCode", DbType.String, vUserSC.FloorCode);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorSrNO", DbType.String, vUserSC.FloorSrNO);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorName", DbType.String, vUserSC.FloorName);
@@ -213,7 +213,8 @@ namespace SMSApp.Models.DAL
 
                 if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
                 {
-                    mFloorSC.ControllerId = mDset.Tables[0].Rows[0]["ControllerId"].ToString();
+                    //mFloorSC.ControllerId = mDset.Tables[0].Rows[0]["ControllerId"].ToString();
+
                     mFloorSC.FloorId = Convert.ToInt32(mDset.Tables[0].Rows[0]["FloorId"]);
                     mFloorSC.FloorCode = mDset.Tables[0].Rows[0]["FloorCode"].ToString();
                     mFloorSC.FloorSrNO = mDset.Tables[0].Rows[0]["FloorSrNO"].ToString();

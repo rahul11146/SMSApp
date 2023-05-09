@@ -320,7 +320,7 @@
                         <div class="modal-footer">
                             <button class="btn btn-secondary btn-sm" type="button" onclick="location.reload();">
                                 <i class="fa fa-remove"></i>
-                                Close
+                                戻る
                             </button>
                             <button class="btn btn-primary btn-sm" type="submit" id="btnBookSeat" name="btnAction" value="BookSeat">
                                 <i class="fa fa-save"></i> 座席の登録
@@ -539,10 +539,12 @@
                 }
                 else if (mType == "Srch") {
 
-                    if (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != null && mFloorMapJSON[i].UserDisplay != "") {
-                        elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mFloorMapJSON[i].UserDisplay + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "','" + mFloorMapJSON[i].DeptName + "')");
-                    }
+                    var mName = mFloorMapJSON[i].LNName + ' ' + mFloorMapJSON[i].FNName;
 
+                    elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mName + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "','" + mFloorMapJSON[i].DeptName + "')");
+
+                    //if (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != null && mFloorMapJSON[i].UserDisplay != "") {
+                    //}
                 }
 
                 elemDiv.appendChild(elemSpan);
@@ -563,8 +565,10 @@
 
                     if (mFloorMapJSON[i].Id == vId) {
 
-                        var mName = (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != "")
-                            ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
+                        //var mName = (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != "")
+                        //    ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
+
+                        var mName = mFloorMapJSON[i].LNName + ' ' + mFloorMapJSON[i].FNName;
 
                         if (mName != "" && mName != undefined) {
                             mName = mFloorMapJSON[i].DeptName + "<br/>" + mFloorMapJSON[i].UserTitle + "<br/>" + mName;

@@ -25,7 +25,7 @@
 
             swal({
                 title: "SUCCESS!",
-                text: "Action completed successfully",
+                text: "正常に完了しました。",
                 type: "success",
                 confirmButtonText: "OK"
             },
@@ -68,7 +68,8 @@
                     <span class="pull-right text-danger" style="margin-right:10px !important">(*) 必須</span>
                 </header>
                 <div class="content-body">
-                    @if (mRoleCode == "SystemAdm")
+
+                    @*@if (mRoleCode == "SystemAdm")
                     {
                         <div class="row">
                             <div class="col-6 col-md-6 col-lg-6">
@@ -91,7 +92,8 @@
                                 </div>
                             </div>
                         </div>
-                    }
+                    }*@
+
                     <div class="row">
                         <div class="col-6 col-md-6 col-lg-6">
                             <div class="form-group">
@@ -196,7 +198,7 @@
             @Html.HiddenFor(model => model.FloorAdmId, new { @id = "txtFloorAdmId"})
             @Html.HiddenFor(model => model.FloorCode, new { @id = "txtFloorCode"})
             @Html.HiddenFor(model => model.FloorSrNO, new { @id = "txtFloorSrNo"})
-            @Html.HiddenFor(model => model.ControllerId, new { @id = "txtControllerId"})
+            @*@Html.HiddenFor(model => model.ControllerId, new { @id = "txtControllerId"})*@
         </div>
     </form>
 </div>
