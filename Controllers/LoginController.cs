@@ -8,6 +8,9 @@ using System.Security.Claims;
 using WebTemplate.Models.BLL;
 using System.Configuration;
 using System.Data;
+using Microsoft.AspNetCore.Hosting;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace SMSApp.Controllers
 {
@@ -15,11 +18,13 @@ namespace SMSApp.Controllers
     {
         private readonly ILogger<LoginController> _logger;
         private IConfiguration Configuration;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public LoginController(ILogger<LoginController> logger, IConfiguration _configuration)
+        public LoginController(ILogger<LoginController> logger, IConfiguration _configuration, IWebHostEnvironment? webHostEnvironment)
         {
             _logger = logger;
             Configuration = _configuration;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Privacy()
@@ -30,18 +35,29 @@ namespace SMSApp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log1605.txt", "Start 1" + Environment.NewLine);
+            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log1605.txt", Configuration.GetSection("AppSettings:IsSSO").Value.ToString() + Environment.NewLine);
+
             if (Configuration.GetSection("AppSettings:IsSSO").Value.ToString() == "Y")
             {
                 LoginBLL mLoginBLL = null;
                 DataSet mDset = new DataSet();
                 mLoginBLL = new LoginBLL();
-                string IsUserExists = string.Empty;
+                string? IsUserExists = string.Empty;
 
-                string? userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name.ToString();
+                //string userName = string.Empty;
+                //if (System.Web.HttpContext.Current != null &&
+                //    System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+                //{
+                //    System.Web.Security.MembershipUser usr = Membership.GetUser();
+                //    if (usr != null)
+                //    {
+                //        userName = usr.UserName;
+                //    }
+                //}
+                //System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log1605.txt", userName + Environment.NewLine);
 
-                userName = userName.Split("\\")[1];
-
-                mDset = mLoginBLL.UserAuthenticate(userName, "SSO", Configuration);
+                mDset = mLoginBLL.UserAuthenticate("", "SSO", Configuration);
 
                 if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
                 {
@@ -121,5 +137,40 @@ namespace SMSApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public string GetFQDN()
+        {
+            string domainName = System.Net.NetworkInformation.IPGlobalProperties.GetIPGlobalProperties().DomainName;
+            string hostName = Dns.GetHostName();
+            string fqdn;
+            if (!hostName.Contains(domainName))
+                fqdn = hostName + "." + domainName;
+            else
+                fqdn = hostName;
+
+            return fqdn;
+        }
+
+        private IPAddress GetDnsAdress()
+        {
+            NetworkInterface[] networkInterfaces = NetworkInterface.GetAllNetworkInterfaces();
+
+            foreach (NetworkInterface networkInterface in networkInterfaces)
+            {
+                if (networkInterface.OperationalStatus == OperationalStatus.Up)
+                {
+                    IPInterfaceProperties ipProperties = networkInterface.GetIPProperties();
+                    IPAddressCollection dnsAddresses = ipProperties.DnsAddresses;
+
+                    foreach (IPAddress dnsAdress in dnsAddresses)
+                    {
+                        return dnsAdress;
+                    }
+                }
+            }
+
+            throw new InvalidOperationException("Unable to find DNS Address");
+        }
+
     }
 }

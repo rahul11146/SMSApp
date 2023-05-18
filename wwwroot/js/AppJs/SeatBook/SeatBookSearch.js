@@ -9,7 +9,12 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http) {
 
 	$scope.SeatBookSearchLst = [];
 
-	$scope.SeatBookSearchList = function (mSrchType) {
+	$scope.DeptId = "0";
+	$scope.Search = "";
+
+	$scope.SeatBookSearchList = function () {
+
+		var mSrchType = $("input[name='rdSearch']:checked").val();
 
 		var mLastName = $(".txtLastName").val();
 		var mFirstName = $(".txtFirstName").val();
@@ -24,7 +29,11 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http) {
 
 		if (mDeptId != null && mDeptId != "") {
 			mDeptId = mDeptId.toString();
+
+			mDeptId = mDeptId.split(":")[1];
+
 		}
+
 
 		$http({
 			method: "POST",
@@ -45,6 +54,59 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http) {
 		}, function myError(response) {
 			alert(response.statusText);
 		});
+	}
+
+	$scope.OnSeatBookSearchChange = function () {
+
+		var mSrchType = $("input[name='rdSearch']:checked").val();
+
+		if (mSrchType == "Name") {
+			$scope.FloorId = "0";
+			$("#select2-ddlFloor-container").text("--Select--");
+
+			$scope.DeptId = "0";
+			$('#ddlDept').select2();
+			$("#select2-ddlDept-container").text("--Select--");
+		}
+		else if (mSrchType == "FLR") {
+
+			$(".txtLastName").val("");
+			$(".txtFirstName").val("");
+
+			$scope.DeptId = "0";
+			$('#ddlDept').select2();
+			$("#select2-ddlDept-container").text("--Select--");
+
+		}
+		else if (mSrchType == "DPT") {
+
+			$(".txtLastName").val("");
+			$(".txtFirstName").val("");
+
+			$scope.FloorId = "0";
+			$("#select2-ddlFloor-container").text("--Select--");
+		}
+
+		$scope.SeatBookSearchLst = [];
+	}
+
+	$scope.ResetSeatBookSearchChange = function () {
+
+		$("input[name='rdSearch']").attr("checked", false);
+
+		$(".txtLastName").val("");
+		$(".txtFirstName").val("");
+
+		$scope.FloorId = "0";
+		$("#select2-ddlFloor-container").text("--Select--");
+
+		$scope.DeptId = "0";
+		$("#select2-ddlDept-container").text("--Select--");
+
+		$scope.SeatBookSearchLst = [];
+
+		$("#rdSearchName").prop("checked", true);
+
 	}
 
 	$scope.ViewSeat = function (vFloorId, vFloorMapId) {
@@ -114,3 +176,7 @@ function RedirectBack() {
 
 	return false;
 }
+
+$(document).ready(function () {
+	$("#rdSearchName").prop("checked", true);
+});

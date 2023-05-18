@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "93wdOtcS9cnORxHr6wKlq4uHONyyCTyb9lI7cc77g6A=",
+  "Hash": "nRfT4WcgAPZs39uxKecM+fFaGNEk7smK9AHB0bAFE+A=",
   "Source": "SMSApp",
   "BasePath": "_content/SMSApp",
   "Mode": "Default",
@@ -1324,6 +1324,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Log1605.txt",
+      "SourceId": "SMSApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\",
+      "BasePath": "_content/SMSApp",
+      "RelativePath": "Log1605.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Log1605.txt"
     },
     {
       "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Pagination\\script.js",
@@ -3060,6 +3077,23 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\FloorImage\\27.png"
     },
     {
+      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\28.jpeg",
+      "SourceId": "SMSApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\",
+      "BasePath": "_content/SMSApp",
+      "RelativePath": "Uploads/FloorImage/28.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\FloorImage\\28.jpeg"
+    },
+    {
       "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\28.png",
       "SourceId": "SMSApp",
       "SourceType": "Discovered",
@@ -3075,6 +3109,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\FloorImage\\28.png"
+    },
+    {
+      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\29.jpeg",
+      "SourceId": "SMSApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\",
+      "BasePath": "_content/SMSApp",
+      "RelativePath": "Uploads/FloorImage/29.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\FloorImage\\29.jpeg"
     },
     {
       "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\29.png",
@@ -3109,6 +3160,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\FloorImage\\3.png"
+    },
+    {
+      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\30.jpeg",
+      "SourceId": "SMSApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\",
+      "BasePath": "_content/SMSApp",
+      "RelativePath": "Uploads/FloorImage/30.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\FloorImage\\30.jpeg"
     },
     {
       "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\30.png",
