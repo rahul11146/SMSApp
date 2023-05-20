@@ -2,7 +2,31 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+    string mCurrUserId = string.Empty;
+    if (ViewBag.UserId != null)
+    {
+        mCurrUserId = ViewBag.UserId.ToString();
+    }
+
+    string FloorMapId = string.Empty;
+    if (ViewBag.FloorMapId != null)
+    {
+        FloorMapId = ViewBag.FloorMapId.ToString();
+    }
+
+    //string? mFloorId = string.Empty;
+    //if (Context.Request.Query.TryGetValue("id", out queryVal))
+    //{
+    //    mFloorId = queryVal.FirstOrDefault();
+    //}
 }
+
+<script type="text/javascript">
+    var mCurrUserId = '@mCurrUserId';
+    var mFloorMapId = '@FloorMapId';
+</script>
 
 <script src="~/js/appjs/seatbook/seatbooksearch.js"></script>
 
@@ -19,7 +43,7 @@
                     <div class="col-md-6">
                         <div class="row" style="border:1px solid black">
                             <div class="col-1 col-md-1 col-lg-1" style="margin-top : 5px !important">
-                                <input type="radio" id="rdSearchName" name="rdSearch" value="Name" ng-model="Search" ng-change="OnSeatBookSearchChange()" />
+                                <input type="radio" id="rdSearchName" name="rdSearch" value="Name" ng-model="Search" ng-change="OnSeatBookSearchChange();DisabledOthField();" />
                             </div>
                             <div class="col-5 col-md-5 col-lg-5" style="margin-top : 5px !important">
                                 <div class="form-group">
@@ -59,7 +83,7 @@
                     <div class="col-md-6">
                         <div class="row" style="border:1px solid black;margin-left:2px">
                             <div class="col-1 col-md-1 col-lg-1" style="margin-top : 5px !important">
-                                <input type="radio" id="rdSearchFlR" name="rdSearch" value="FLR" ng-model="Search" ng-change="OnSeatBookSearchChange()" />
+                                <input type="radio" id="rdSearchFlR" name="rdSearch" value="FLR" ng-model="Search" ng-change="OnSeatBookSearchChange();DisabledOthField();" />
                             </div>
                             <div class="col-11 col-md-11 col-lg-11" style="margin-top : 5px !important">
                                 <div class="form-group">
@@ -96,7 +120,7 @@
                     <div class="col-md-6" style="border:1px solid black;">
                         <div class="row">
                             <div class="col-1 col-md-1 col-lg-1" style="margin-top:2px">
-                                <input type="radio" id="rdSearchDPT" name="rdSearch" value="DPT" ng-model="Search" ng-change="OnSeatBookSearchChange()" />
+                                <input type="radio" id="rdSearchDPT" name="rdSearch" value="DPT" ng-model="Search" ng-change="OnSeatBookSearchChange();DisabledOthField();" />
                             </div>
                             <div class="col-11 col-md-11 col-lg-11" style="margin-top:3px">
                                 <div class="form-group">
@@ -190,7 +214,26 @@
                         </table>
                     </div>
                 </div>
+
+                <div id="dvSearchModal" aria-labelledby="dvSearchModal" class="modal fade dvSearchModal" role="dialog"
+                     data-backdrop="static" aria-modal="true" style="display: none;" name="dvSearchModal">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">座標の登録</h4>
+                                <button aria-label="Close" class="close" type="button" data-dismiss="modal">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="dvDisplaySrch" name="dvDisplaySrch">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </section>
     </div>
 </div>

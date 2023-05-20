@@ -213,6 +213,39 @@ namespace SMSApp.Controllers
             return View("FloorMap", mFloorMapSC);
         }
 
+
+        [HttpGet]
+        public PartialViewResult OpenSeatSearch(String id, string FloorMapId, string vType)
+        {
+            FloorBLL mFloorBLL = null;
+            FloorMapSC mFloorMapSC = null;
+            FloorSC mFloorSC = null;
+            string mUserId = string.Empty;
+
+            mFloorBLL = new FloorBLL();
+            mFloorMapSC = new FloorMapSC();
+            mFloorSC = new FloorSC();
+
+            mUserId = User.GetUserId();
+
+            mFloorSC = mFloorBLL.FloorGetById(id, mUserId, Configuration);
+
+            mFloorMapSC.FloorId = Convert.ToInt32(id);
+            mFloorMapSC.ImagePath = mFloorSC.ImagePath;
+
+            mFloorMapSC.FloorMapLst = mFloorBLL.FloorMapGetById(mFloorMapSC.FloorId.ToString(), FloorMapId, vType, Configuration);
+            mFloorMapSC.IsActive = "1";
+            mFloorMapSC.FloorName = mFloorSC.FloorName;
+
+            if (mFloorMapSC.FloorMapLst != null && mFloorMapSC.FloorMapLst.Count > 0)
+                mFloorMapSC.FloorMapJSON = JsonConvert.SerializeObject(mFloorMapSC.FloorMapLst);
+
+            ViewBag.UserId = User.GetUserId();
+
+            return PartialView("Common/FloorMap", mFloorMapSC);
+        }
+
+
         [HttpPost]
         public IActionResult GetAllRoles()
         {
