@@ -84,6 +84,10 @@ app.controller('FloorMapFormCtrl', function ($scope, $http) {
 		});
 	}
 
+	$scope.RedirectBack = function () {
+		window.location.href = "/SeatBook/Index";
+	}
+
 });
 
 function SaveFloorMap() {

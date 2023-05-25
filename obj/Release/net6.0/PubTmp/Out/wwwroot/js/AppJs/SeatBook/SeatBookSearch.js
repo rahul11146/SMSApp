@@ -62,7 +62,7 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 			$scope.FloorId = "0";
 			$("#select2-ddlFloor-container").text("--Select--");
 
-			$scope.DeptId = "0";
+			$scope.DeptId = "0";	
 			$('#ddlDept').select2();
 			$("#select2-ddlDept-container").text("--Select--");
 		}
@@ -90,21 +90,27 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 
 	$scope.ResetSeatBookSearchChange = function () {
 
-		$("input[name='rdSearch']").attr("checked", false);
+		window.location.reload();
 
-		$(".txtLastName").val("");
-		$(".txtFirstName").val("");
+		//$("input[name='rdSearch']").attr("checked", false);
 
-		$scope.FloorId = "0";
-		$("#select2-ddlFloor-container").text("--Select--");
+		//$(".txtLastName").val("");
+		//$(".txtFirstName").val("");
 
-		$scope.DeptId = "0";
-		$("#select2-ddlDept-container").text("--Select--");
+		//$("#rdSearchFlR").prop("checked", true);
+		//$("#txtLastName").attr("readonly", "readonly");
+		//$("#txtFirstName").attr("readonly", "readonly");
+		//$("#ddlFloor").select2({ disabled: false });
+		//$("#ddlDept").select2({ disabled: true });
 
-		$scope.SeatBookSearchLst = [];
+		//$scope.FloorId = "0";
+		//$("#select2-ddlFloor-container").text("--Select--");
 
-		$("#rdSearchFlR").prop("checked", true);
+		//$scope.DeptId = "0";
+		//$("#select2-ddlDept-container").text("--Select--");
+		//$scope.SeatBookSearchLst = [];
 
+		//$scope.DisabledOthField();
 	}
 
 	$scope.ViewSeat = function (vFloorId, vFloorMapId) {
@@ -180,18 +186,22 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 
 		var mSrchType = $("input[name='rdSearch']:checked").val();
 
-		//$("#txtLastName").removeAttr("readonly");
-		//$("#txtFirstName").removeAttr("readonly");
-		//$("#ddlFloor").select2("readonly", false);
-		//$("#ddlDept").select2("readonly", false);
-
 		if (mSrchType == "FLR") {
+
+			$("#txtLastName").val("");
+			$("#txtFirstName").val("");
 
 			$("#txtLastName").attr("readonly", "readonly");
 			$("#txtFirstName").attr("readonly", "readonly");
 
 			$("#ddlFloor").select2({ disabled: false });
 			$("#ddlDept").select2({ disabled: true });
+
+			$scope.DeptId = "0";
+			$("#select2-ddlDept-container").text("--Select--");
+
+			$scope.FloorId = "0";
+			$("#select2-ddlFloor-container").text("--Select--");
 
 		}
 		else if (mSrchType == "Name") {
@@ -202,6 +212,14 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 			$("#ddlFloor").select2({ disabled: true });
 			$("#ddlDept").select2({ disabled: true });
 
+			$("#txtLastName").val("");
+			$("#txtFirstName").val("");
+
+			$scope.FloorId = "0";
+			$("#select2-ddlFloor-container").text("--Select--");
+
+			$scope.DeptId = "0";
+			$("#select2-ddlDept-container").text("--Select--");
 
 		}
 		else if (mSrchType == "DPT") {
@@ -211,6 +229,15 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 
 			$("#ddlFloor").select2({ disabled: true });
 			$("#ddlDept").select2({ disabled: false });
+
+			$("#txtLastName").val("");
+			$("#txtFirstName").val("");
+
+			$scope.FloorId = "0";
+			$("#select2-ddlFloor-container").text("--Select--");
+
+			$scope.DeptId = "0";
+			$("#select2-ddlDept-container").text("--Select--");
 		}
 	}
 

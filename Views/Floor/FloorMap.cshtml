@@ -129,6 +129,11 @@
                         在宅勤務中のユーザ
                     </button>
                 }
+
+                <button class="btn btn-secondary" type="button" ng-click="RedirectBack();" style="margin:20px">
+                    戻る
+                </button>
+
             </header>
             <div class="content-body">
                 <div class="row">
@@ -137,7 +142,6 @@
                             @*<label class="form-label title">フロア名</label>*@
                             <div class="controls" id="dvControls" style="margin-top:-15px">
                                 <img id="myImgId" src="@Url.Content(Model.ImagePath)" />
-
                                 @*<div id="dv_1" onclick="BookSeat(24,'15','20','','undefined','undefined','293','246')" style="position: absolute; width: 15px; height: 20px; background: rgba(220, 20, 60, 0.4);">
                                 <span style="position: absolute; width: 30px; height: 20px;  font-weight: bolder;color:black;"> 太郎</span>
                                 </div>*@
