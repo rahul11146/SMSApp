@@ -1217,3 +1217,5 @@ D:\Apps\Seat Management System\SMSApplication\SMSApp\bin\Release\net6.0\runtimes
 D:\Apps\Seat Management System\SMSApplication\SMSApp\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Speech.dll
 D:\Apps\Seat Management System\SMSApplication\SMSApp\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 D:\Apps\Seat Management System\SMSApplication\SMSApp\bin\Release\net6.0\runtimes\win\lib\net6.0\System.Threading.AccessControl.dll
+D:\Apps\Seat Management System\SMSApplication\SMSApp\obj\Release\net6.0\SMSApp.Properties.Resources.resources
+D:\Apps\Seat Management System\SMSApplication\SMSApp\obj\Release\net6.0\SMSApp.csproj.GenerateResource.cache

@@ -116,7 +116,7 @@
                     </div>
                     </div>*@
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top:12px">
                     <div class="col-md-6" style="border:1px solid black;">
                         <div class="row">
                             <div class="col-1 col-md-1 col-lg-1" style="margin-top:2px">
@@ -189,6 +189,9 @@
                                     <td ng-bind="item.SeatDetails"></td>
                                     <td class="text text-center">
                                         <span style="cursor:pointer" ng-click="ViewSeat(item.FloorId,item.FloorMapId);" ng-show="item.BookType == '登録済み'">
+                                            <i class="fa fa-eye"></i>
+                                        </span>
+                                        <span style="cursor:pointer" ng-click="OpenSeat(item.FloorId,item.FloorMapId);" ng-show="item.BookType == '登録済み'">
                                             <i class="fa fa-eye"></i>
                                         </span>
                                     </td>

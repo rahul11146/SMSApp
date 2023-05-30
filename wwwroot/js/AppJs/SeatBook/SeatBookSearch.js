@@ -62,7 +62,7 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 			$scope.FloorId = "0";
 			$("#select2-ddlFloor-container").text("--Select--");
 
-			$scope.DeptId = "0";	
+			$scope.DeptId = "0";
 			$('#ddlDept').select2();
 			$("#select2-ddlDept-container").text("--Select--");
 		}
@@ -139,6 +139,10 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 			});
 
 		return false;
+	}
+
+	$scope.OpenSeat = function (vFloorId, vFloorMapId) {
+		window.open("/Floor/EditMapFloor?id=" + vFloorId + "&FloorMapId=" + vFloorMapId + "&vType=Srch");
 	}
 
 	$scope.FloorId = "0";

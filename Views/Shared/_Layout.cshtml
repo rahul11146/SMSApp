@@ -19,7 +19,6 @@
     mRoleName = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value;
     mProfPic = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.UserData)?.Value;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,13 +84,11 @@
         <div class='quick-area'>
             <div class='float-left'>
                 <ul class="info-menu left-links list-inline list-unstyled">
-                    <li class="sidebar-toggle-wrap list-inline-item">
+                    <li class="sidebar-toggle-wrap list-inline-item" style="margin-left:-90px">
                         <h6>
                             <a href="#" data-toggle="sidebar" class="sidebar_toggle">
-
                                 <i class="fa fa-angle-left"></i>
                                 <i class="fa fa-angle-right"></i>
-
                             </a>
                         </h6>
                     </li>

@@ -1,6 +1,7 @@
 using AspNetCore.Unobtrusive.Ajax;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Options;
+using System.Web.Services.Description;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Login/Index";
     });
+
+builder.Services.Configure<IISOptions>(options =>
+{
+    options.AutomaticAuthentication = false;
+});
 
 var app = builder.Build();
 
@@ -37,8 +43,5 @@ app.UseUnobtrusiveAjax();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
-
 
 app.Run();
