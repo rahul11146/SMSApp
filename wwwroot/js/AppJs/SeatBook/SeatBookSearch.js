@@ -142,7 +142,7 @@ app.controller('SeatBookSearchCtrl', function ($scope, $http, $compile) {
 	}
 
 	$scope.OpenSeat = function (vFloorId, vFloorMapId) {
-		window.open("/Floor/EditMapFloor?id=" + vFloorId + "&FloorMapId=" + vFloorMapId + "&vType=Srch");
+		window.open("/Floor/EditMapFloor?id=" + vFloorId + "&FloorMapId=" + vFloorMapId + "&vType=Srch", "New", "height=1000,width=1000");
 	}
 
 	$scope.FloorId = "0";

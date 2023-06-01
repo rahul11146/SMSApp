@@ -130,9 +130,12 @@
                     </button>
                 }
 
-                <button class="btn btn-secondary" type="button" ng-click="RedirectBack();" style="margin:20px">
-                    戻る
-                </button>
+                @if (mType != "Srch")
+                {
+                    <button class="btn btn-secondary" type="button" ng-click="RedirectBack();" style="margin:20px">
+                        戻る
+                    </button>
+                }
 
             </header>
             <div class="content-body">
