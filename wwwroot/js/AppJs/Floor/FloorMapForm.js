@@ -85,7 +85,14 @@ app.controller('FloorMapFormCtrl', function ($scope, $http) {
 	}
 
 	$scope.RedirectBack = function () {
-		window.location.href = "/Floor/Index";
+
+		if (mType == "Map") {
+			window.location.href = "/Floor/Index";
+		}
+		else if (mType == "BS") {
+			window.location.href = "/SeatBook/Index";
+		}
+
 	}
 
 });

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DMlhRXhuS4Kj+jCNcsRtcBvspxOpll493MCs+SQKyrw=",
+  "Hash": "5/PGIVPOLcysZ0p4ceQqAWB7+k/k05VCrMflpnG67/Y=",
   "Source": "SMSApp",
   "BasePath": "_content/SMSApp",
   "Mode": "Default",
@@ -1324,6 +1324,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Log\\LogFile.txt",
+      "SourceId": "SMSApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\",
+      "BasePath": "_content/SMSApp",
+      "RelativePath": "Log/LogFile.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Log\\LogFile.txt"
     },
     {
       "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Log1605.txt",

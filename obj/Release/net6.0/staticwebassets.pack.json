@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Log1605.txt"
     },
     {
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Log\\LogFile.txt",
+      "PackagePath": "staticwebassets\\Log\\LogFile.txt"
+    },
+    {
       "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Pagination\\script.js",
       "PackagePath": "staticwebassets\\Pagination\\script.js"
     },

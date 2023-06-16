@@ -35,8 +35,7 @@ namespace SMSApp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log1605.txt", "Start 1" + Environment.NewLine);
-            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log1605.txt", Configuration.GetSection("AppSettings:IsSSO").Value.ToString() + Environment.NewLine);
+            //System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "LogFile.txt", Configuration.GetSection("AppSettings:IsSSO").Value.ToString());
 
             if (Configuration.GetSection("AppSettings:IsSSO").Value.ToString() == "Y")
             {
@@ -45,19 +44,17 @@ namespace SMSApp.Controllers
                 mLoginBLL = new LoginBLL();
                 string? IsUserExists = string.Empty;
 
-                //string userName = string.Empty;
-                //if (System.Web.HttpContext.Current != null &&
-                //    System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
-                //{
-                //    System.Web.Security.MembershipUser usr = Membership.GetUser();
-                //    if (usr != null)
-                //    {
-                //        userName = usr.UserName;
-                //    }
-                //}
-                //System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log1605.txt", userName + Environment.NewLine);
+                string userName = Environment.UserName;
 
-                mDset = mLoginBLL.UserAuthenticate("", "SSO", Configuration);
+                try
+                {
+                    System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "LogFile.txt", userName);
+                }
+                catch (Exception)
+                {
+                }
+
+                mDset = mLoginBLL.UserAuthenticate(userName, "SSO", Configuration);
 
                 if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
                 {
