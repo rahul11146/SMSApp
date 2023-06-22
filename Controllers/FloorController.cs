@@ -53,19 +53,13 @@ namespace SMSApp.Controllers
 
         // Save Floor
         [HttpPost]
-        public IActionResult SaveFloorData(FloorSC vFloorSC)
+        public IActionResult SaveFloorData(FloorSC vFloorSC, string btnSave)
         {
+            string mFileName = string.Empty;
+            string IsFile = "N";
+
             try
             {
-                if (vFloorSC.FloorId == null && vFloorSC.FloorImage == null)
-                {
-                    return Json(new
-                    {
-                        IsSuccess = "N",
-                        ErrorMessage = "The '詳細' Field is required"
-                    });
-                }
-
                 FloorBLL mFloorBLL = null;
                 ImageSC mImageSC = null;
                 ImageDAL mImageDAL = null;
@@ -78,26 +72,85 @@ namespace SMSApp.Controllers
 
                 mImageDAL = new ImageDAL(Configuration);
 
-                if (vFloorSC.FloorId == null)
-                    vFloorSC.IsEdit = "N";
-                else if (vFloorSC.FloorImage != null)
-                    vFloorSC.IsEdit = "N";
-                else if (vFloorSC.FloorId != null)
-                    vFloorSC.IsEdit = "Y";
-
-                vFloorSC.ControllerId = !string.IsNullOrEmpty(vFloorSC.ControllerId) ? vFloorSC.ControllerId : "0";
-                vFloorSC.CurrUserId = User.GetUserId();
-
-                if (vFloorSC.FloorImage != null)
+                if (btnSave == "Save")
                 {
-                    mImageSC.IsEdit = vFloorSC.IsEdit;
-                    mImageSC.ImageName = Path.GetFileName(vFloorSC.FloorImage.FileName);
-                    mImageSC.CurrUserId = User.GetUserId();
-                    mImageSC.OrgImagepath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", "FloorImage");
-                    mImageSC.TestPath = _webHostEnvironment.WebRootPath;
-                }
+                    if (vFloorSC.FloorId == null && vFloorSC.FloorImage == null)
+                    {
+                        return Json(new
+                        {
+                            IsSuccess = "N",
+                            ErrorMessage = "The '詳細' Field is required"
+                        });
+                    }
 
-                mFloorBLL.SaveFloor(mImageSC, vFloorSC, Configuration);
+                    if (vFloorSC.FloorName == null)
+                    {
+                        return Json(new
+                        {
+                            IsSuccess = "N",
+                            ErrorMessage = "The 'フロア名' Field is required"
+                        });
+                    }
+
+                    if (vFloorSC.FloorId == null)
+                        vFloorSC.IsEdit = "N";
+                    else if (vFloorSC.FloorImage != null)
+                        vFloorSC.IsEdit = "N";
+                    else if (vFloorSC.FloorId != null)
+                        vFloorSC.IsEdit = "Y";
+
+                    vFloorSC.ControllerId = !string.IsNullOrEmpty(vFloorSC.ControllerId) ? vFloorSC.ControllerId : "0";
+                    vFloorSC.CurrUserId = User.GetUserId();
+
+                    if (vFloorSC.FloorImage != null)
+                    {
+                        mImageSC.IsEdit = vFloorSC.IsEdit;
+                        mImageSC.ImageName = Path.GetFileName(vFloorSC.FloorImage.FileName);
+                        mImageSC.CurrUserId = User.GetUserId();
+                        mImageSC.OrgImagepath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", "FloorImage");
+                        mImageSC.TestPath = _webHostEnvironment.WebRootPath;
+                    }
+
+                    mFloorBLL.SaveFloor(mImageSC, vFloorSC, Configuration);
+
+                }
+                else
+                {
+                    vFloorSC.CurrUserId = User.GetUserId();
+
+                    if (vFloorSC.FloorImage != null)
+                    {
+                        mImageSC.ImageName = Path.GetFileName(vFloorSC.FloorImage.FileName);
+                        mImageSC.OrgImagepath = Path.Combine(_webHostEnvironment.WebRootPath, "Uploads", "FloorTempImage", vFloorSC.CurrUserId.ToString());
+
+                        if (!Directory.Exists(mImageSC.OrgImagepath))
+                        {
+                            Directory.CreateDirectory(mImageSC.OrgImagepath);
+                        }
+
+                        string[] mFile = Directory.GetFiles(mImageSC.OrgImagepath);
+
+                        if (mFile != null && mFile.Length > 0)
+                        {
+                            foreach (string f in mFile)
+                            {
+                                System.IO.File.Delete(f);
+                            }
+                        }
+
+
+                        mFileName = vFloorSC.FloorImage.FileName;
+
+                        mFilePath = mImageSC.OrgImagepath + "\\" + mFileName;
+
+                        using (var stream = System.IO.File.Create(mFilePath))
+                        {
+                            vFloorSC.FloorImage.CopyTo(stream);
+                        }
+
+                        IsFile = "Y";
+                    }
+                }
 
             }
             catch (Exception ex)
@@ -109,7 +162,9 @@ namespace SMSApp.Controllers
 
             return Json(new
             {
-                IsSuccess = "Y"
+                IsSuccess = "Y",
+                IsFile = IsFile,
+                FileName = mFileName
             });
         }
 

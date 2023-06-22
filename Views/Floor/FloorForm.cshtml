@@ -2,19 +2,37 @@
 @using System.Security.Claims;
 @using Microsoft.AspNetCore.Mvc.Razor;
 @using Microsoft.AspNetCore.Http;
+@using System.IO;
 @inject IHttpContextAccessor HttpContextAccessor;
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 
     string? mRoleCode = string.Empty;
+    string? mUserId = string.Empty;
+    string[] mFloorAllImg = { };
+    string mFloorImg = string.Empty;
 
     mRoleCode = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.PrimarySid)?.Value;
+    mUserId = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+
+    //string mFilePath = @"D:\Apps\Seat Management System\SMSApplication\SMSApp\wwwroot\Uploads\FloorTempImage\";
+
+    //string[] mFiles = Directory.GetFiles(@mFilePath + mUserId.ToString());
+    //string mFileName = string.Empty;
+
+    //if (mFiles != null && mFiles.Length > 0)
+    //{
+    //    mFileName = System.IO.Path.GetFileName(mFiles[0]);
+    //}
+
 }
 
 <script src="~/js/appjs/floor/floorform.js"></script>
 
 <script type="text/javascript">
+
+    var mCurrUserId = '@mUserId';
 
     function OnUserSuccess(data) {
 
@@ -23,15 +41,21 @@
         }
         else {
 
-            swal({
-                title: "SUCCESS!",
-                text: "正常に完了しました。",
-                type: "success",
-                confirmButtonText: "OK"
-            },
-                function (isConfirm) {
-                    window.location.href = '@Url.Action("Index","Floor")';
-                });
+            if (data.isFile == "Y") {
+                $("#FlrImg").attr("src","");
+                $("#FlrImg").attr("src", "/Uploads/FloorTempImage/" + mCurrUserId + "/" + data.fileName);
+            }
+            else {
+                swal({
+                    title: "SUCCESS!",
+                    text: "正常に完了しました。",
+                    type: "success",
+                    confirmButtonText: "OK"
+                },
+                    function (isConfirm) {
+                        window.location.href = '@Url.Action("Index","Floor")';
+                    });
+            }
         }
     }
 
@@ -40,10 +64,12 @@
     }
 
     function RedirectBack() {
-
         window.location.href = '@Url.Action("Index","Floor")';
-
         return false;
+    }
+
+    function OnFloorImageChng() {
+        $("#btnUpload").click();
     }
 
 </script>
@@ -71,27 +97,27 @@
 
                     @*@if (mRoleCode == "SystemAdm")
                     {
-                        <div class="row">
-                            <div class="col-6 col-md-6 col-lg-6">
-                                <div class="form-group">
-                                    <label class="form-label title">
-                                        管理部門
-                                        <span class="text text-danger">*</span>
-                                    </label>
-                                    <div class="controls">
-                                        <select id="ddlController" class="form-control ddlSelect2Single" ng-model="ControllerId" onchange="OnControllerSel();" on-Finish-Render>
-                                            <option ng-selected="ControllerId == item.ControllerId" ng-value="0">--Select--</option>
-                                            <option ng-selected="ControllerId == item.ControllerId" ng-repeat="item in ControllerList" ng-value="item.ControllerId">
-                                                {{item.ControllerName}}
-                                            </option>
-                                        </select>
-                                        <div id="dvErrors" class="text-danger">
-                                            @Html.ValidationMessageFor(model => model.ControllerId)
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row">
+                    <div class="col-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                    <label class="form-label title">
+                    管理部門
+                    <span class="text text-danger">*</span>
+                    </label>
+                    <div class="controls">
+                    <select id="ddlController" class="form-control ddlSelect2Single" ng-model="ControllerId" onchange="OnControllerSel();" on-Finish-Render>
+                    <option ng-selected="ControllerId == item.ControllerId" ng-value="0">--Select--</option>
+                    <option ng-selected="ControllerId == item.ControllerId" ng-repeat="item in ControllerList" ng-value="item.ControllerId">
+                    {{item.ControllerName}}
+                    </option>
+                    </select>
+                    <div id="dvErrors" class="text-danger">
+                    @Html.ValidationMessageFor(model => model.ControllerId)
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
                     }*@
 
                     <div class="row">
@@ -126,7 +152,8 @@
                                     <span class="text text-danger">*</span>
                                 </label>
                                 <div class="controls">
-                                    @Html.TextBoxFor(model => model.FloorImage, new { @type="file", @class = "form-control" })
+
+                                    @Html.TextBoxFor(model => model.FloorImage, new { @type="file", @class = "form-control",@onchange="OnFloorImageChng();" })
 
                                     @if (Model != null && Model.ImageName != null)
                                     {
@@ -176,12 +203,32 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <label class="form-label">Enter</label>
+                        </div>
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="controls">
+                                @Html.TextBoxFor(model => model.Height, new { @id = "txtHeight", @class = "form-control" ,@placeholder = "Enter Height"})
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-2 col-lg-2">
+                            <div class="controls">
+                                @Html.TextBoxFor(model => model.Width, new { @id = "txtWidth", @class = "form-control" ,@placeholder = "Enter Width"})
+                            </div>
+                        </div>
+                    </div>
+                    </br>
                     <div class="row">
                         <div class="col-12 col-md-9 col-lg-8 padding-bottom-30">
                             <div class="text-left">
-                                <button type="submit" class="btn btn-primary" onclick="return SaveFloor();">
-                                    <span class="fa fa-save"></span>
+                                <button type="submit" class="btn btn-primary" onclick="return SaveFloor();" name="btnSave" value="Save">
                                     保存
+                                </button>
+                                <button id="btnUpload" type="submit" class="btn btn-primary" name="btnSave" value="Upload" style="display:none">
+                                    <span class="fa fa-save"></span>
+                                    Upload
                                 </button>
                                 <button type="button" class="btn" onclick="return RedirectBack();">
                                     <span class="fa fa-undo"></span>
@@ -190,6 +237,19 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <br />
+                    <div class="row">
+                        <div class="col-6 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <div class="controls" id="dvControls" style="margin-top:-15px">
+                                    <img id="FlrImg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>
@@ -198,7 +258,70 @@
             @Html.HiddenFor(model => model.FloorAdmId, new { @id = "txtFloorAdmId"})
             @Html.HiddenFor(model => model.FloorCode, new { @id = "txtFloorCode"})
             @Html.HiddenFor(model => model.FloorSrNO, new { @id = "txtFloorSrNo"})
-            @*@Html.HiddenFor(model => model.ControllerId, new { @id = "txtControllerId"})*@
         </div>
+
+        <script type="text/javascript">
+
+            function FindPosition(oElement) {
+
+                if (typeof (oElement.offsetParent) != "undefined") {
+                    for (var posX = 0, posY = 0; oElement; oElement = oElement.offsetParent) {
+                        posX += oElement.offsetLeft;
+                        posY += oElement.offsetTop;
+                    }
+                    return [posX, posY];
+                }
+                else {
+                    return [oElement.x, oElement.y];
+                }
+            }
+
+            function GetCoordinates(e) {
+
+                var PosX = 0;
+                var PosY = 0;
+                var ImgPos;
+
+                ImgPos = FindPosition(myImg);
+
+                if (!e) var e = window.event;
+
+                if (e.pageX || e.pageY) {
+                    PosX = e.pageX;
+                    PosY = e.pageY;
+                }
+                else if (e.clientX || e.clientY) {
+                    PosX = e.clientX + document.body.scrollLeft
+                        + document.documentElement.scrollLeft;
+                    PosY = e.clientY + document.body.scrollTop
+                        + document.documentElement.scrollTop;
+                }
+
+                PosX = PosX - ImgPos[0];
+                PosY = PosY - ImgPos[1];
+
+                var elemDiv = document.createElement('div');
+                var elemSpan = document.createElement('span');
+
+                var mWidth = $("#txtWidth").val();
+                var mHeight = $("#txtHeight").val();
+
+                elemDiv.style.cssText = 'position:absolute;width:' + mWidth + 'px;height:' + mHeight + 'px;background:rgba(0, 0, 255, 0.25);cursor: pointer;';
+                elemDiv.style.left = PosX + "px";
+                elemDiv.style.top = PosY + "px";
+
+                elemSpan.style.cssText = 'position: absolute;width: max-content;background:rgba(0, 0, 255, 0.25);font-weight: bolder;color:black;font-size:11px';
+
+                elemDiv.appendChild(elemSpan);
+                document.getElementById('dvControls').appendChild(elemDiv);
+            }
+
+            var myImg = document.getElementById("FlrImg");
+
+            myImg.onmousedown = GetCoordinates;
+
+        </script>
+
     </form>
+
 </div>

@@ -113,6 +113,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        // Seat Book Checkright for IsWFH or not
         public DataSet SeatBookCheckRights(string vCurrUsrId)
         {
             DataSet mDset = new DataSet();

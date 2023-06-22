@@ -8,15 +8,15 @@ using System.Xml.Linq;
 
 namespace SMSApp.Models.SC
 {
-	[Serializable]
-	public class FloorSC
+    [Serializable]
+    public class FloorSC
     {
-		public Int32? FloorId { get; set; }
+        public Int32? FloorId { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "フロア名")]
         public String? FloorName { get; set; }
-        
+
         public string? FloorDesc { get; set; }
 
         //[Required]
@@ -29,7 +29,7 @@ namespace SMSApp.Models.SC
         public string? ControllerId { get; set; }
         public string? FloorAdmId { get; set; }
         public String? CurrUserId { get; set; }
-		public String? IsEdit { get; set; }
+        public String? IsEdit { get; set; }
         public String? ImgId { get; set; }
         public String? CreatedBy { get; set; }
         public String? ImageName { get; set; }
@@ -38,6 +38,8 @@ namespace SMSApp.Models.SC
         public String? UsernameFontsize { get; set; }
         public String? ControllerName { get; set; }
         public String? Status { get; set; }
+        public String? Height { get; set; }
+        public String? Width { get; set; }
 
     }
 }

@@ -75,6 +75,7 @@ namespace WebTemplate.Models.BLL
             mFloorDAL.BookSeat(vFloorMapSC);
         }
 
+        // Seat Book Checkright for IsWFH or not
         public DataSet SeatBookCheckRights(string vCurrUsrId, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;

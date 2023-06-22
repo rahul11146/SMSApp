@@ -4767,11 +4767,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\SMSApp.csproj",
+      "projectUniqueName": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\SMSApp.csproj",
       "projectName": "SMSApp",
-      "projectPath": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\SMSApp.csproj",
+      "projectPath": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\SMSApp.csproj",
       "packagesPath": "C:\\Users\\CAIN 252761\\.nuget\\packages\\",
-      "outputPath": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\obj\\",
+      "outputPath": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CAIN 252761\\AppData\\Roaming\\NuGet\\NuGet.Config",

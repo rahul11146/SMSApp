@@ -457,6 +457,10 @@
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\30.png"
     },
     {
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\31.jpeg",
+      "PackagePath": "staticwebassets\\Uploads\\FloorImage\\31.jpeg"
+    },
+    {
       "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\31.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\31.png"
     },
@@ -523,6 +527,10 @@
     {
       "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorImage\\Screenshot 2023-03-17 100309.png",
       "PackagePath": "staticwebassets\\Uploads\\FloorImage\\Screenshot 2023-03-17 100309.png"
+    },
+    {
+      "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\FloorTempImage\\7\\1.png",
+      "PackagePath": "staticwebassets\\Uploads\\FloorTempImage\\7\\1.png"
     },
     {
       "Id": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSApp\\wwwroot\\Uploads\\ProfileImage\\10.jpg",
