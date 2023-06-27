@@ -58,6 +58,8 @@ namespace SMSApp.Models.SC
         public string? UserTitle { get; set; }
         public string? ProfilePhotoPath { get; set; }
         public string? UsernameFontsize { get; set; }
+        public string? ActWidth { get; set; }
+        public string? ActHeight { get; set; }
 
     }
 }

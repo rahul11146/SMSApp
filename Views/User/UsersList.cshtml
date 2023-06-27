@@ -13,8 +13,10 @@
     }
 
     function RedirectToEdit(vUserId) {
+
         window.location.href = '@Url.Action("Edit","User")' + "/" + vUserId + "&PageType=User";
         return false;
+
     }
 
 </script>
@@ -35,48 +37,48 @@
             <div class="content-body">
                 <div class="row">
                     <div class="col-12">
-                            <table id="tblUserList" class="display table table-hover table-condensed tblDataTable" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Sr No</th>
-                                        <th>名（漢字）</th>
-                                        <th>姓（漢字）</th>
-                                        <th>ステータス</th>
-                                        <th>作成日</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr dir-paginate="item in UserList | orderBy: 'RowId' | itemsPerPage: pageSize | record:'currentPage':this"
-                                        pagination-id="mealsPagination">
-                                        <td>
-                                            <span style="cursor:pointer" ng-click="RedirectUserToEdit(item.UserId);">
-                                                <i class="fa fa-edit"></i>
-                                            </span>
-                                        </td>
-                                        <td ng-bind="item.RowId"></td>
-                                        <td ng-bind="item.FNKanji"></td>
-                                        <td ng-bind="item.LNKanji"></td>
-                                        <td>
-                                            <span class="badge badge-primary" ng-bind="item.Status" ng-show="item.Status == 'Active'"></span>
-                                            <span class="badge timeline-badge" ng-bind="item.Status" ng-show="item.Status == 'InActive'"></span>
-                                        </td>
-                                        <td ng-bind="item.CreatedOn"></td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="6">
-                                            <div class="text-center pull-right">
-                                                <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
-                                                                         template-url="@Url.Content("~/dirpagination.tpl.html")"
-                                                                         pagination-id="mealsPagination">
-                                                </dir-pagination-controls>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                        <table id="tblUserList" class="display table table-hover table-condensed tblDataTable" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Sr No</th>
+                                    <th>名（漢字）</th>
+                                    <th>姓（漢字）</th>
+                                    <th>ステータス</th>
+                                    <th>作成日</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr dir-paginate="item in UserList | orderBy: 'RowId' | itemsPerPage: pageSize | record:'currentPage':this"
+                                    pagination-id="mealsPagination">
+                                    <td>
+                                        <span style="cursor:pointer" ng-click="RedirectUserToEdit(item.UserEncId);">
+                                            <i class="fa fa-edit"></i>
+                                        </span>
+                                    </td>
+                                    <td ng-bind="item.RowId"></td>
+                                    <td ng-bind="item.FNKanji"></td>
+                                    <td ng-bind="item.LNKanji"></td>
+                                    <td>
+                                        <span class="badge badge-primary" ng-bind="item.Status" ng-show="item.Status == 'Active'"></span>
+                                        <span class="badge timeline-badge" ng-bind="item.Status" ng-show="item.Status == 'InActive'"></span>
+                                    </td>
+                                    <td ng-bind="item.CreatedOn"></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <div class="text-center pull-right">
+                                            <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
+                                                                     template-url="@Url.Content("~/dirpagination.tpl.html")"
+                                                                     pagination-id="mealsPagination">
+                                            </dir-pagination-controls>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>

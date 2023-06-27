@@ -47,7 +47,7 @@
                                 <tr dir-paginate="item in ControllerMapList | orderBy: 'RowId' | itemsPerPage: pageSize | record:'currentPage':this"
                                     pagination-id="tblControllerMapList">
                                     <td>
-                                        <span style="cursor:pointer" ng-click="RedirectUserToControllerMap(item.ControllerId);">
+                                        <span style="cursor:pointer" ng-click="RedirectUserToControllerMap(item.EncControllerId);">
                                             <i class="fa fa-edit"></i>
                                         </span>
                                     </td>

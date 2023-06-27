@@ -15,17 +15,6 @@
 
     mRoleCode = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.PrimarySid)?.Value;
     mUserId = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
-
-    //string mFilePath = @"D:\Apps\Seat Management System\SMSApplication\SMSApp\wwwroot\Uploads\FloorTempImage\";
-
-    //string[] mFiles = Directory.GetFiles(@mFilePath + mUserId.ToString());
-    //string mFileName = string.Empty;
-
-    //if (mFiles != null && mFiles.Length > 0)
-    //{
-    //    mFileName = System.IO.Path.GetFileName(mFiles[0]);
-    //}
-
 }
 
 <script src="~/js/appjs/floor/floorform.js"></script>
@@ -162,6 +151,11 @@
                                         </a>
                                     }
 
+                                    <br />
+                                    <span class="text text-danger">
+                                        レイアウト更新の際に現在の利用者はチェックアウトされます。
+                                    </span>
+
                                     <div id="dvErrors" class="text-danger">
                                         @Html.ValidationMessageFor(model => model.FloorImage)
                                     </div>
@@ -205,23 +199,38 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-2 col-md-2 col-lg-2">
-                            <label class="form-label">プレビューのリセット</label>
-                        </div>
-                        <div class="col-2 col-md-2 col-lg-2">
-                            <div class="controls">
-                                @Html.TextBoxFor(model => model.Height, new { @id = "txtHeight", @class = "form-control" ,@placeholder = "Enter Height"})
+                        <div class="col-4 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    座席指定初期値縦幅
+                                    <span class="text text-danger">*</span>
+                                </label>
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(model => model.Height, new { @id = "txtHeight", @class = "form-control" ,@placeholder = "Enter Height"})
+                                        </div>
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(model => model.Width, new { @id = "txtWidth", @class = "form-control" ,@placeholder = "Enter Width"})
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-2 col-md-2 col-lg-2">
-                            <div class="controls">
-                                @Html.TextBoxFor(model => model.Width, new { @id = "txtWidth", @class = "form-control" ,@placeholder = "Enter Width"})
-                            </div>
+
+                        @*<div class="col-1 col-md-1 col-lg-1">
+                        <div class="controls">
                         </div>
+                        </div>
+                        <div class="col-1 col-md-1 col-lg-1">
+                        <div class="controls">
+
+                        </div>
+                        </div>*@
                     </div>
                     </br>
                     <div class="row">
-                        <div class="col-12 col-md-9 col-lg-8 padding-bottom-30">
+                        <div class="col-12 col-md-12 col-lg-12 padding-bottom-30">
                             <div class="text-left">
                                 <button type="submit" class="btn btn-primary" onclick="return SaveFloor();" name="btnSave" value="Save">
                                     保存
@@ -234,11 +243,17 @@
                                     <span class="fa fa-undo"></span>
                                     戻る
                                 </button>
+
+                                <button type="button" class="btn btn-light pull-right" onclick="return ResetFloor();" value="Reset">
+                                    プレビューのリセット
+                                </button>
+
                             </div>
                         </div>
                     </div>
 
                     <br />
+
                     @if (Model.FloorId != null)
                     {
                         <div class="row">
@@ -320,6 +335,7 @@
                 var mWidth = $("#txtWidth").val();
                 var mHeight = $("#txtHeight").val();
 
+                elemDiv.setAttribute("class", "dvBookSeat");
                 elemDiv.style.cssText = 'position:absolute;width:' + mWidth + 'px;height:' + mHeight + 'px;background:rgba(0, 0, 255, 0.25);cursor: pointer;';
                 elemDiv.style.left = PosX + "px";
                 elemDiv.style.top = PosY + "px";
@@ -333,6 +349,12 @@
             var myImg = document.getElementById("FlrImg");
 
             myImg.onmousedown = GetCoordinates;
+
+            function ResetFloor() {
+                if (confirm("Are you sure ?? \nYou want to Reset")) {
+                    $('.dvBookSeat').remove();
+                }
+            }
 
         </script>
 

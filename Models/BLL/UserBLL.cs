@@ -30,7 +30,7 @@ namespace WebTemplate.Models.BLL
             using (mTransactionScope)
             {
                 if (vUserSC.Password != null)
-                    vUserSC.Password = PwdHelper.Encrypt(vUserSC.Password);
+                    vUserSC.Password = Helper.Encrypt(vUserSC.Password);
 
                 vUserId = mUserDAL.SaveUser(vUserSC);
 

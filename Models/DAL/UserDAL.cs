@@ -99,6 +99,8 @@ namespace SMSApp.Models.DAL
                 CurrentDataBase.AddInParameter(mDbCommand, "@vCurrUserId", DbType.String, vCurrUserId);
 
                 mDset = CurrentDataBase.ExecuteDataSet(mDbCommand);
+
+
             }
             catch (Exception ex)
             {
@@ -129,7 +131,7 @@ namespace SMSApp.Models.DAL
                     mUserSC.UserId = Convert.ToInt32(mDset.Tables[0].Rows[0]["UserId"]);
                     mUserSC.Username = mDset.Tables[0].Rows[0]["Username"].ToString();
 
-                    mUserSC.Password = PwdHelper.Decrypt(mDset.Tables[0].Rows[0]["Password"].ToString());
+                    mUserSC.Password = Helper.Decrypt(mDset.Tables[0].Rows[0]["Password"].ToString());
 
                     mUserSC.FNKanji = mDset.Tables[0].Rows[0]["FNKanji"].ToString();
                     mUserSC.LNKanji = mDset.Tables[0].Rows[0]["LNKanji"].ToString();

@@ -66,11 +66,7 @@ app.controller('FloorFormCtrl', function ($scope, $http) {
 });
 
 function SaveFloor() {
-
-	//$("#txtControllerId").val(_FloorForm.ControllerId);
-
 	$("#txtFloorAdmId").val(_FloorForm.FloorAdminId);
-
 	return true;
 }
 

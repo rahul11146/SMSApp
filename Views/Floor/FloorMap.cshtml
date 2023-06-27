@@ -41,6 +41,18 @@
         mFloorId = queryVal.FirstOrDefault();
     }
 
+    string mWidth = string.Empty;
+    if (ViewBag.Width != null)
+    {
+        mWidth = ViewBag.Width.ToString();
+    }
+
+    string mHeight = string.Empty;
+    if (ViewBag.Height != null)
+    {
+        mHeight = ViewBag.Height.ToString();
+    }
+
 }
 
 <script type="text/javascript">
@@ -48,6 +60,9 @@
     var mCurrUserId = '@mCurrUserId';
     var mFloorId = '@mFloorId';
     var mFloorMapId = '@FloorMapId';
+
+    var mWidth = '@mWidth';
+    var mHeight = '@mHeight';
 
 </script>
 
@@ -121,6 +136,9 @@
                     {
                         <h2 class="title float-left">座席の選択 - @Model.FloorName</h2>
                     }
+
+                    @Html.HiddenFor(model => model.ActWidth, new { @id = "hiddActWidth"})
+                    @Html.HiddenFor(model => model.ActHeight, new { @id = "hiddActHeight"})
                 }
 
                 @if (mType == "Srch")
@@ -267,6 +285,7 @@
                             @Html.HiddenFor(model => model.FloorMapJSON, new { @id = "txtFloorJSON"})
                             @Html.HiddenFor(model => model.FloorMapId, new { @id = "hiddFloorMapId"})
                             @Html.HiddenFor(model => model.Id, new { @id = "hiddId"})
+
                         </div>
                     </form>
                 </div>
@@ -479,8 +498,8 @@
 
             var mCordinates = PosX + "," + PosY;
 
-            $("#txtWidth").val("15");
-            $("#txtHeight").val("15");
+            $("#txtWidth").val(mWidth);
+            $("#txtHeight").val(mHeight);
 
             $("#spCurrentXY").text(mCordinates);
 
@@ -497,7 +516,7 @@
         var myImg = document.getElementById("myImgId");
 
         myImg.onmousedown = GetCoordinates;
-        
+
     </script>
 
     <script type="text/javascript">

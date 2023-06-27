@@ -11,6 +11,7 @@ using System.Data;
 using Microsoft.AspNetCore.Hosting;
 using System.Net;
 using System.Net.NetworkInformation;
+using Microsoft.Extensions.Logging;
 
 namespace SMSApp.Controllers
 {
@@ -19,12 +20,15 @@ namespace SMSApp.Controllers
         private readonly ILogger<LoginController> _logger;
         private IConfiguration Configuration;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public LoginController(ILogger<LoginController> logger, IConfiguration _configuration, IWebHostEnvironment? webHostEnvironment)
+        public LoginController(ILogger<LoginController> logger, IConfiguration _configuration,
+                               IWebHostEnvironment? webHostEnvironment, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
             Configuration = _configuration;
             _webHostEnvironment = webHostEnvironment;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public IActionResult Privacy()
@@ -35,8 +39,6 @@ namespace SMSApp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            //System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "LogFile.txt", Configuration.GetSection("AppSettings:IsSSO").Value.ToString());
-
             if (Configuration.GetSection("AppSettings:IsSSO").Value.ToString() == "Y")
             {
                 LoginBLL mLoginBLL = null;
@@ -83,6 +85,25 @@ namespace SMSApp.Controllers
             return View("Login");
         }
 
+        private string getWindowsUserId()
+        {
+            var identityInfo = HttpContext.User.Identity;
+
+            var identityInfo1 = HttpContext;
+
+            //_logger.SystemLog(Logger.LogType.Debug, string.Format("[Identity]UserId:{0},IsAuthenticated:{1},AuthenticationType:{2}",
+            //    identityInfo.Name, identityInfo.IsAuthenticated, identityInfo.AuthenticationType));
+
+            if (identityInfo.IsAuthenticated)
+            {
+                return identityInfo.Name;
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
         // Login user with Username and password
         [HttpPost]
         public ActionResult Submit(LoginSC vLoginSC)
@@ -90,9 +111,9 @@ namespace SMSApp.Controllers
             LoginBLL mLoginBLL = null;
             DataSet mDset = new DataSet();
             mLoginBLL = new LoginBLL();
-            string IsUserExists = string.Empty;
+            string? IsUserExists = string.Empty;
 
-            vLoginSC.password = PwdHelper.Encrypt(vLoginSC.password);
+            vLoginSC.password = Helper.Encrypt(vLoginSC.password);
 
             mDset = mLoginBLL.UserAuthenticate(vLoginSC.username, vLoginSC.password, Configuration);
 

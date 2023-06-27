@@ -57,7 +57,7 @@ app.controller('FloorFormCtrl', function ($scope, $http) {
 		});
 	}
 
-	$scope.GetAllController();
+	//$scope.GetAllController();
 
 	$scope.RedirectUserToEdit = function (vId) {
 		window.location.href = "/User/Edit/" + vId;
@@ -66,10 +66,7 @@ app.controller('FloorFormCtrl', function ($scope, $http) {
 });
 
 function SaveFloor() {
-
-	$("#txtControllerId").val(_FloorForm.ControllerId);
 	$("#txtFloorAdmId").val(_FloorForm.FloorAdminId);
-
 	return true;
 }
 

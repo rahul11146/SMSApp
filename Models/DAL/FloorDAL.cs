@@ -35,7 +35,6 @@ namespace SMSApp.Models.DAL
                 mDbCommand = CurrentDataBase.GetStoredProcCommand(StoredProcedures.spr_Floor_Save);
 
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorId", DbType.String, vUserSC.FloorId);
-                //CurrentDataBase.AddInParameter(mDbCommand, "@vControllerId", DbType.String, vUserSC.ControllerId);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorCode", DbType.String, vUserSC.FloorCode);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorSrNO", DbType.String, vUserSC.FloorSrNO);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorName", DbType.String, vUserSC.FloorName);
@@ -43,6 +42,8 @@ namespace SMSApp.Models.DAL
                 CurrentDataBase.AddInParameter(mDbCommand, "@vFloorImageId", DbType.String, vUserSC.FloorImageId);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vRevNo", DbType.String, vUserSC.RevNO);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vUsernameFontsize", DbType.String, vUserSC.UsernameFontsize);
+                CurrentDataBase.AddInParameter(mDbCommand, "@vHeight", DbType.String, vUserSC.Height);
+                CurrentDataBase.AddInParameter(mDbCommand, "@vWidth", DbType.String, vUserSC.Width);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vIsEdit", DbType.String, vUserSC.IsEdit);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vCurrUsrId", DbType.String, vUserSC.CurrUserId);
                 CurrentDataBase.AddInParameter(mDbCommand, "@vIsActive", DbType.String, vUserSC.Status);
@@ -225,6 +226,9 @@ namespace SMSApp.Models.DAL
                     mFloorSC.UsernameFontsize = mDset.Tables[0].Rows[0]["UsernameFontsize"].ToString();
                     mFloorSC.ControllerName = mDset.Tables[0].Rows[0]["ControllerName"].ToString();
                     mFloorSC.Status = mDset.Tables[0].Rows[0]["IsActive"].ToString();
+
+                    mFloorSC.Height = mDset.Tables[0].Rows[0]["Height"].ToString();
+                    mFloorSC.Width = mDset.Tables[0].Rows[0]["Width"].ToString();
 
                     mFloorSC.CreatedBy = mDset.Tables[0].Rows[0]["CreatedBy"].ToString();
                     mFloorSC.ImgId = mDset.Tables[0].Rows[0]["ImgId"].ToString();

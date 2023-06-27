@@ -6,9 +6,9 @@ using System.Text;
 
 namespace SMSApp.Models
 {
-	public class PwdHelper
+	public class Helper
 	{
-		public static string Encrypt(string password)
+		public static string Encrypt(string? password)
 		{
 			String encodedData = String.Empty;
 			byte[] encData_byte = { };
@@ -20,7 +20,7 @@ namespace SMSApp.Models
 			return encodedData;
 		}
 
-		public static string Decrypt(string encodedData)
+		public static string Decrypt(string? encodedData)
 		{
 			UTF8Encoding encoder = new System.Text.UTF8Encoding();
 			Decoder utf8Decode = encoder.GetDecoder();

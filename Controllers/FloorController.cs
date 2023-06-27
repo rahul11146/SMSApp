@@ -151,7 +151,6 @@ namespace SMSApp.Controllers
                         IsFile = "Y";
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -260,10 +259,15 @@ namespace SMSApp.Controllers
             mFloorMapSC.IsActive = "1";
             mFloorMapSC.FloorName = mFloorSC.FloorName;
 
+            mFloorMapSC.width = mFloorSC.Width;
+            mFloorMapSC.height = mFloorSC.Height;
+
             if (mFloorMapSC.FloorMapLst != null && mFloorMapSC.FloorMapLst.Count > 0)
                 mFloorMapSC.FloorMapJSON = JsonConvert.SerializeObject(mFloorMapSC.FloorMapLst);
 
             ViewBag.UserId = User.GetUserId();
+            ViewBag.Width = mFloorSC.Width;
+            ViewBag.Height = mFloorSC.Height;
 
             return View("FloorMap", mFloorMapSC);
         }
