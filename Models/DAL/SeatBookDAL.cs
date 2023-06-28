@@ -22,6 +22,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
 
+        // Save Floor
         public string SaveFloor(FloorSC vUserSC)
         {
             string? mFloorId = string.Empty;
@@ -52,6 +53,7 @@ namespace SMSApp.Models.DAL
             return mFloorId;
         }
 
+        // Save Floor Map
         public string SaveFloorMap(FloorMapSC vFloorMapSC)
         {
             string? mFloorId = string.Empty;
@@ -85,6 +87,7 @@ namespace SMSApp.Models.DAL
             return mFloorId;
         }
 
+        // View All Seat List
         public DataSet ViewSeatList(String vCurrUserId)
         {
             DataSet mDset = null;
@@ -106,6 +109,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Floor Get by Id
         public FloorSC FloorGetById(string vFloorId)
         {
             DataSet mDset = null;
@@ -145,6 +149,8 @@ namespace SMSApp.Models.DAL
 
             return mFloorSC;
         }
+        
+        // Get Floor Map Get by Id
         public IList<FloorMapSC> FloorMapGetById(string vFloorId, string vId)
         {
             DataSet mDset = null;
@@ -194,6 +200,7 @@ namespace SMSApp.Models.DAL
             return mFloorMapSCList;
         }
 
+        // Get All Roles
         public DataSet GetAllRoles()
         {
             DataSet mDset = null;
@@ -214,6 +221,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Get All Floor List
         public DataSet GetAllFloorList()
         {
             DataSet mDset = null;
@@ -234,6 +242,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Get All Floor Admin List
         public DataSet GetAllFloorAdminList()
         {
             DataSet mDset = null;

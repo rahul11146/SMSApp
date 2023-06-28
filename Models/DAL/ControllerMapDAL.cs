@@ -24,6 +24,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
 
+        //For new Controller Mapping
         public void SaveControllerMap(ControllerMapSC vControllerMapSC)
         {
             try
@@ -51,6 +52,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        //View Controller Mapping
         public DataSet ViewControllerMapList(String vCurrUserId)
         {
             DataSet mDset = null;
@@ -72,6 +74,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        //Edit Controller Mapping
         public ControllerMapSC ControllerMapGetById(string vControllerMapId)
         {
             DataSet? mDset = null;
@@ -110,6 +113,7 @@ namespace SMSApp.Models.DAL
             return mControllerMapSC;
         }
 
+        //Get All Floor List
         public DataSet GetAllFloor(string vCurrUsrID)
         {
             DataSet mDset = null;

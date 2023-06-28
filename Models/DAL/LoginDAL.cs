@@ -23,6 +23,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
         
+        // User Authentication
         public DataSet UserAuthenticate(string vUsername,string vPassword)
         {
             DataSet mDset = null;

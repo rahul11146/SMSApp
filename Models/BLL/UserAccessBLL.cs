@@ -13,6 +13,7 @@ namespace WebTemplate.Models.BLL
 {
     public class UserAccessBLL
     {
+        // Save User Access
         public void SaveUserAccess(UserAccessSC vUserAccessSC, IConfiguration _configuration)
         {
             UserAccessDAL mUserAccessDAL = null;
@@ -60,6 +61,7 @@ namespace WebTemplate.Models.BLL
             mTransactionScope.Dispose();
         }
 
+        // View All User Access
         public DataSet ViewUserAccessList(String vCurrUserId, IConfiguration _configuration)
         {
             UserAccessDAL mUserAccessDAL = null;
@@ -72,6 +74,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // User Access Get by Id
         public UserAccessSC UserAccessGetById(String vUserAccessId, IConfiguration _configuration)
         {
             UserAccessDAL mUserAccessDAL = null;
@@ -85,6 +88,7 @@ namespace WebTemplate.Models.BLL
             return mUserAccessSC;
         }
 
+        // Get All User List
         public DataSet GetAllUsersList(IConfiguration _configuration)
         {
             UserAccessDAL mUserAccessDAL = null;
@@ -97,6 +101,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get All Floor List
         public DataSet GetAllFloorList(string vUserId, string vType, IConfiguration _configuration)
         {
             UserAccessDAL? mUserAccessDAL = null;
@@ -109,6 +114,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get All Department
         public DataSet GetAllDepartment(IConfiguration _configuration)
         {
             UserDAL mUserDAL = null;
@@ -120,7 +126,5 @@ namespace WebTemplate.Models.BLL
 
             return mDset;
         }
-
-
     }
 }

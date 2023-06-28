@@ -37,7 +37,6 @@ namespace SMSApp.Controllers
             return View("UserAccessList");
         }
 
-
         // Redirect to new User Access Page
         [HttpGet]
         public ActionResult New()
@@ -106,7 +105,6 @@ namespace SMSApp.Controllers
 
             return Json(JsonConvert.SerializeObject(mDset));
         }
-
 
         // Edit User Access List
         [HttpGet]

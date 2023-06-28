@@ -10,6 +10,7 @@ namespace WebTemplate.Models.BLL
 {
     public class RoleBLL
 	{
+		// Save Roles
         public void SaveRoles(RolesSC vRolesSC,IConfiguration _configuration)
         {
             RoleDAL mRoleDAL = null;
@@ -19,6 +20,7 @@ namespace WebTemplate.Models.BLL
 			mRoleDAL.SaveRoles(vRolesSC);
         }
 
+		// Get All Roles List
 		public DataSet RoleViewList(String vCurrUserId, IConfiguration _configuration)
 		{
 			RoleDAL mRoleDAL = null;
@@ -31,6 +33,7 @@ namespace WebTemplate.Models.BLL
 			return mDset;
 		}
 
+		// Role get by id
 		public RolesSC RoleGetById(String vRoleId, IConfiguration _configuration)
 		{
 			RoleDAL mRoleDAL = null;

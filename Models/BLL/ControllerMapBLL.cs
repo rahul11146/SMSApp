@@ -11,6 +11,7 @@ namespace WebTemplate.Models.BLL
 {
     public class ControllerMapBLL
     {
+        //For new Controller Mapping
         public void SaveControllerMap(ControllerMapSC vControllerMapSC, IConfiguration _configuration)
         {
             ControllerMapDAL mControllerMapDAL = null;
@@ -35,6 +36,7 @@ namespace WebTemplate.Models.BLL
             mControllerMapDAL.SaveControllerMap(vControllerMapSC);
         }
 
+        //View Controller Mapping
         public DataSet ViewControllerMapList(String vCurrUserId, IConfiguration _configuration)
         {
             ControllerMapDAL mControllerMapDAL = null;
@@ -47,6 +49,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        //Edit Controller Mapping
         public ControllerMapSC ControllerMapGetById(String vControllerMapId, IConfiguration _configuration)
         {
             ControllerMapDAL? mControllerMapDAL = null;
@@ -60,6 +63,7 @@ namespace WebTemplate.Models.BLL
             return mControllerMapSC;
         }
 
+        //Get All Floor List
         public DataSet GetAllFloor(string vCurrUsrId, IConfiguration _configuration)
         {
             ControllerMapDAL mControllerMapDAL = null;

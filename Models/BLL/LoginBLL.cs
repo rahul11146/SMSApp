@@ -13,6 +13,7 @@ namespace WebTemplate.Models.BLL
 {
     public class LoginBLL
     {
+        // User Authentication
         public DataSet UserAuthenticate(string vUsername, string vPassword, IConfiguration _configuration)
         {
             LoginDAL mLoginDAL = null;

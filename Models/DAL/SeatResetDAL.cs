@@ -20,6 +20,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
 
+        // Seat Reset Today
         public void ResetSeatLogToday()
         {
             DbCommand mDbCommand = null;
@@ -29,6 +30,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase.ExecuteDataSet(mDbCommand);
         }
 
+        // Seat Reset Log
         public string? ResetSPLog(string? vId, string vIsType)
         {
             DbCommand mDbCommand = null;

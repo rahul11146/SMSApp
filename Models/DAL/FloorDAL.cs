@@ -25,6 +25,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
 
+        // Save Floor
         public string SaveFloor(FloorSC vUserSC)
         {
             string? mFloorId = string.Empty;
@@ -59,6 +60,7 @@ namespace SMSApp.Models.DAL
             return mFloorId;
         }
 
+        //Save Floor Mapping
         public string SaveFloorMap(FloorMapSC vFloorMapSC)
         {
             string? mFloorId = string.Empty;
@@ -91,6 +93,7 @@ namespace SMSApp.Models.DAL
             return mFloorId;
         }
 
+        // Book Seat
         public void BookSeat(FloorMapSC vFloorMapSC)
         {
             try
@@ -156,6 +159,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        // Release Seat
         public void ReleaseSeat(FloorMapSC vFloorMapSC)
         {
             try
@@ -175,6 +179,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        //View Floor List
         public DataSet ViewFloorList(String vCurrUserId, string vIsActive)
         {
             DataSet mDset = null;
@@ -197,6 +202,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Floor Get by Id
         public FloorSC FloorGetById(string vFloorId, string vUserId)
         {
             DataSet mDset = null;
@@ -246,6 +252,7 @@ namespace SMSApp.Models.DAL
             return mFloorSC;
         }
 
+        // Floor Validate
         public string FloorGetByIdValidate(string vFloorId, string vUserId)
         {
             DataSet mDset = null;
@@ -277,6 +284,7 @@ namespace SMSApp.Models.DAL
             return IsSuccess;
         }
 
+        // Floor Map Get by Id
         public IList<FloorMapSC> FloorMapGetById(string? vFloorId, string vId, string vType)
         {
             DataSet mDset = null;
@@ -338,6 +346,7 @@ namespace SMSApp.Models.DAL
             return mFloorMapSCList;
         }
 
+        // Get All Roles
         public DataSet GetAllRoles()
         {
             DataSet mDset = null;
@@ -358,6 +367,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Get Floor List
         public DataSet GetAllFloorList()
         {
             DataSet mDset = null;
@@ -378,6 +388,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Get All Floor Admin List
         public DataSet GetAllFloorAdminList()
         {
             DataSet mDset = null;
@@ -398,6 +409,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Get All Controller List
         public DataSet GetAllControllerList()
         {
             DataSet mDset = null;
@@ -418,6 +430,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Is User WFH
         public DataSet IsUserWFH(string vUserId)
         {
             DataSet mDset = null;
@@ -439,6 +452,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Seat Search List
         public DataSet SeatSearchList(string vLastName, string vFirstName, string vFloorId, string vDeptId, string vCurrUsrId)
         {
             DataSet mDset = null;
@@ -464,6 +478,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // View Seat Book List
         public DataSet ViewSeatBookList(string vCurrUsrId)
         {
             DataSet mDset = null;
@@ -485,6 +500,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Show All WFH User Under Home Map
         public DataSet ShowAllWFHUserUnderHM(string vFloorId, string vCurrUsrId)
         {
             DataSet mDset = null;

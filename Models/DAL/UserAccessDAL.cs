@@ -23,7 +23,8 @@ namespace SMSApp.Models.DAL
         {
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
-
+        
+        // Save User Access
         public string SaveUserAccess(UserAccessSC vUserAccessSC)
         {
             string? vUserId = string.Empty;
@@ -50,6 +51,7 @@ namespace SMSApp.Models.DAL
             return vUserId;
         }
 
+        // Save User Access Users
         public void SaveUserAccessUsers(UserAccessSC vUserAccessSC)
         {
             DbCommand? mDbCommand = null;
@@ -72,6 +74,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        // View All User Access List
         public DataSet ViewUserAccessList(String vCurrUserId)
         {
             DataSet mDset = null;
@@ -93,6 +96,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // User Access get by id
         public UserAccessSC UserAccessGetById(string vUserAccessId)
         {
             DataSet mDset = null;
@@ -128,6 +132,7 @@ namespace SMSApp.Models.DAL
             return mUserAccessSC;
         }
 
+        // Get All User List
         public DataSet GetAllUsersList()
         {
             DataSet mDset = null;
@@ -148,6 +153,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Get All Floor List
         public DataSet GetAllFloorList(string vUserId,string vType)
         {
             DataSet? mDset = null;

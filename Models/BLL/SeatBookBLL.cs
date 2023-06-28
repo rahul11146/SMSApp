@@ -12,6 +12,7 @@ namespace WebTemplate.Models.BLL
 {
     public class SeatBookBLL
     {
+        // Save Floor Data
         public void SaveFloor(ImageSC vImageSC, FloorSC vFloorSC, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -44,6 +45,7 @@ namespace WebTemplate.Models.BLL
             }
         }
 
+        // Save Floor Map data
         public void SaveFloorMap(FloorMapSC vFloorMapSC, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -54,6 +56,7 @@ namespace WebTemplate.Models.BLL
             mFloorDAL.SaveFloorMap(vFloorMapSC);
         }
 
+        // View Seat List
         public DataSet ViewSeatList(String vCurrUserId, IConfiguration _configuration)
         {
             SeatBookDAL mSeatBookDAL = null;
@@ -66,32 +69,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
-        //public FloorSC FloorGetById(String vFloorId, IConfiguration _configuration)
-        //{
-        //    FloorDAL mFloorDAL = null;
-        //    FloorSC mFloorSC = null;
-
-        //    mFloorDAL = new FloorDAL(_configuration);
-        //    mFloorSC = new FloorSC();
-
-        //    mFloorSC = mFloorDAL.FloorGetById(vFloorId);
-
-        //    return mFloorSC;
-        //}
-
-        //public IList<FloorMapSC> FloorMapGetById(string? vFloorId, string vId, IConfiguration _configuration)
-        //{
-        //    FloorDAL mFloorDAL = null;
-        //    IList<FloorMapSC> mFloorMapSCList = null;
-
-        //    mFloorDAL = new FloorDAL(_configuration);
-        //    mFloorMapSCList = new List<FloorMapSC>();
-
-        //    mFloorMapSCList = mFloorDAL.FloorMapGetById(vFloorId, vId);
-
-        //    return mFloorMapSCList;
-        //}
-
+        // Get All Floor
         public DataSet GetAllFloor(IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -104,6 +82,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get All Floor Admin List
         public DataSet GetAllFloorAdminList(IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;

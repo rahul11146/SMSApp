@@ -13,6 +13,7 @@ namespace WebTemplate.Models.BLL
 {
     public class UserBLL
     {
+        // Save and Update new Users
         public void SaveUser(ImageSC vImageSC, UserSC vUserSC, IConfiguration _configuration)
         {
             UserDAL mUserDAL = null;
@@ -56,6 +57,7 @@ namespace WebTemplate.Models.BLL
             mTransactionScope.Dispose();
         }
 
+        // View User List
         public DataSet ViewUserList(String vCurrUserId, IConfiguration _configuration)
         {
             UserDAL mUserDAL = null;
@@ -68,6 +70,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get User by Id
         public UserSC UserGetById(String vRoleId, IConfiguration _configuration)
         {
             UserDAL mUserDAL = null;
@@ -81,6 +84,7 @@ namespace WebTemplate.Models.BLL
             return mUserSC;
         }
 
+        // Get All Roles
         public DataSet GetAllRoles(IConfiguration _configuration)
         {
             UserDAL mUserDAL = null;
@@ -93,6 +97,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get All Department
         public DataSet GetAllDepartment(IConfiguration _configuration)
         {
             UserDAL mUserDAL = null;
@@ -105,6 +110,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get ALl Map Floor
         public DataSet GetAllMapFloor(string vCurrUsrId,IConfiguration _configuration)
         {
             UserDAL mUserDAL = null;

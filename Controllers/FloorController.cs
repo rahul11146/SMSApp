@@ -202,7 +202,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
-        //Update Floor List
+        //Get User By Id
         [HttpGet]
         public ActionResult Edit(String id)
         {
@@ -231,6 +231,7 @@ namespace SMSApp.Controllers
 
             mUserId = User.GetUserId();
 
+            // Floor Validation
             mIsSuccess = mFloorBLL.FloorGetByIdValidate(id, mUserId, Configuration);
 
             if (mIsSuccess == "0")
@@ -263,6 +264,7 @@ namespace SMSApp.Controllers
             mFloorMapSC.FloorId = Convert.ToInt32(id);
             mFloorMapSC.ImagePath = mFloorSC.ImagePath;
 
+            // Get Floor Details
             mFloorMapSC.FloorMapLst = mFloorBLL.FloorMapGetById(mFloorMapSC.FloorId.ToString(), FloorMapId, vType, Configuration);
             mFloorMapSC.IsActive = "1";
             mFloorMapSC.FloorName = mFloorSC.FloorName;
@@ -312,7 +314,7 @@ namespace SMSApp.Controllers
             return PartialView("Common/FloorMap", mFloorMapSC);
         }
 
-
+        //Get All Roles
         [HttpPost]
         public IActionResult GetAllRoles()
         {
@@ -326,6 +328,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        //Get All WFH User under Homemap
         [HttpPost]
         public IActionResult GetAllWFHUserUnderHM(string vFloorId)
         {
@@ -341,6 +344,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Get All Floor Admin List
         [HttpPost]
         public IActionResult GetAllFloorAdminList()
         {
@@ -354,6 +358,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Get All Controller List
         [HttpPost]
         public IActionResult GetAllControllerList()
         {
@@ -367,6 +372,7 @@ namespace SMSApp.Controllers
             return Json(JsonConvert.SerializeObject(mDset));
         }
 
+        // Book Seat and Release Seat
         [HttpPost]
         public IActionResult BookSeat(FloorMapSC vFloorMapSC, string btnAction)
         {
@@ -380,9 +386,9 @@ namespace SMSApp.Controllers
             vFloorMapSC.UserId = Convert.ToInt32(User.GetUserId());
             vFloorMapSC.IsBook = "1";
 
-            if (btnAction == "BookSeat")
+            if (btnAction == "BookSeat") // Book Seat
                 mFloorBLL.BookSeat(vFloorMapSC, Configuration);
-            else if (btnAction == "Release")
+            else if (btnAction == "Release") // Release Seat
                 mFloorBLL.ReleaseSeat(vFloorMapSC, Configuration);
 
             return Json(new
@@ -391,6 +397,7 @@ namespace SMSApp.Controllers
             });
         }
 
+        // Release Seat
         [HttpPost]
         public IActionResult ReleaseSeat(FloorMapSC vFloorMapSC)
         {

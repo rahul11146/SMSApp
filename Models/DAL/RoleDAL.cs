@@ -21,6 +21,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
 
+        // Save Roles
         public void SaveRoles(RolesSC vRolesSC)
         {
             try
@@ -42,6 +43,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        // Get ALl Roles List
         public DataSet RoleViewList(String vCurrUserId)
         {
             DataSet mDset = null;
@@ -64,6 +66,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // Role Get by Id
         public RolesSC RoleGetById(String vRoleId)
         {
             DataSet mDset = null;

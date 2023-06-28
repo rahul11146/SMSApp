@@ -22,6 +22,7 @@ namespace SMSApp.Models.DAL
             CurrentDataBase = new SqlDatabase(_configuration.GetConnectionString("DBConn"));
         }
 
+        // Save Image
         public void SaveImage(ImageSC vImageSC)
         {
             try
@@ -47,6 +48,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        // Profile Image Save
         public void ProfPicImageSave(ImageSC vImageSC)
         {
             try
@@ -72,6 +74,7 @@ namespace SMSApp.Models.DAL
             }
         }
 
+        // View User List
         public DataSet ViewUserList(String vCurrUserId)
         {
             DataSet mDset = null;
@@ -93,6 +96,7 @@ namespace SMSApp.Models.DAL
             return mDset;
         }
 
+        // User Get by Id
         public UserSC UserGetById(string vUserId)
         {
             DataSet mDset = null;
@@ -134,6 +138,7 @@ namespace SMSApp.Models.DAL
             return mUserSC;
         }
 
+        // Get All Roles
         public DataSet GetAllRoles()
         {
             DataSet mDset = null;

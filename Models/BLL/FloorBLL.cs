@@ -14,6 +14,7 @@ namespace WebTemplate.Models.BLL
 {
     public class FloorBLL
     {
+        // Save Floor
         public void SaveFloor(ImageSC vImageSC, FloorSC vFloorSC, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -55,6 +56,7 @@ namespace WebTemplate.Models.BLL
             mTransactionScope.Dispose();
         }
 
+        //Save Floor Mapping
         public void SaveFloorMap(FloorMapSC vFloorMapSC, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -65,6 +67,7 @@ namespace WebTemplate.Models.BLL
             mFloorDAL.SaveFloorMap(vFloorMapSC);
         }
 
+        // Book Seat
         public void BookSeat(FloorMapSC vFloorMapSC, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -110,6 +113,7 @@ namespace WebTemplate.Models.BLL
             mFloorDAL.CheckOut(vCurrUsrId);
         }
 
+        // Release Seat
         public void ReleaseSeat(FloorMapSC vFloorMapSC, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -120,6 +124,7 @@ namespace WebTemplate.Models.BLL
             mFloorDAL.ReleaseSeat(vFloorMapSC);
         }
 
+        //View Floor List
         public DataSet ViewFloorList(String vCurrUserId, string vIsActive, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -144,6 +149,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Floor Get by Id
         public FloorSC FloorGetById(String vFloorId, string vUserId, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -171,6 +177,7 @@ namespace WebTemplate.Models.BLL
             return mIsSuccess;
         }
 
+        //Edit Floor Map Details by Id
         public IList<FloorMapSC> FloorMapGetById(string? vFloorId, string vId, string vType, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -184,6 +191,7 @@ namespace WebTemplate.Models.BLL
             return mFloorMapSCList;
         }
 
+        // Get All Floor
         public DataSet GetAllFloor(IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -196,6 +204,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get All Floor Admin List
         public DataSet GetAllFloorAdminList(IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -208,6 +217,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Get All Controller List
         public DataSet GetAllControllerList(IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -220,6 +230,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Is User WFH
         public DataSet IsUserWFH(string vUserId, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
@@ -232,6 +243,7 @@ namespace WebTemplate.Models.BLL
             return mDset;
         }
 
+        // Show All WFH User
         public DataSet ShowAllWFHUserUnderHM(string vFloorId,string vCurrUsrId, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
