@@ -80,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Apps/Seat Management System/SMSApplication/SMSAppFloorPreview/SMSApp/Views/UnAuthorize/UnAuthorizeForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5BdXRob3JpemVcVW5BdXRob3JpemVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Apps/Seat Management System/SMSApplication/SMSAppFloorPreview/SMSApp/Views/UserAccess/UserAccessForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckFjY2Vzc1xVc2VyQWNjZXNzRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

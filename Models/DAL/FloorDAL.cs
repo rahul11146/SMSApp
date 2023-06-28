@@ -11,6 +11,7 @@ using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Reflection.Metadata;
 //using Microsoft.EntityFrameworkCore.Storage;
 
 namespace SMSApp.Models.DAL
@@ -244,6 +245,38 @@ namespace SMSApp.Models.DAL
 
             return mFloorSC;
         }
+
+        public string FloorGetByIdValidate(string vFloorId, string vUserId)
+        {
+            DataSet mDset = null;
+            FloorSC mFloorSC = null;
+            string? IsSuccess = string.Empty;
+
+            try
+            {
+                DbCommand mDbCommand = null;
+
+                mFloorSC = new FloorSC();
+                mDbCommand = CurrentDataBase.GetStoredProcCommand(StoredProcedures.spr_Floor_Validation);
+
+                CurrentDataBase.AddInParameter(mDbCommand, "@vFloorId", DbType.String, vFloorId);
+                CurrentDataBase.AddInParameter(mDbCommand, "@vCurrUsrId", DbType.String, vUserId);
+
+                mDset = CurrentDataBase.ExecuteDataSet(mDbCommand);
+
+                if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
+                {
+                    IsSuccess = mDset.Tables[0].Rows[0]["IsSuccess"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return IsSuccess;
+        }
+
         public IList<FloorMapSC> FloorMapGetById(string? vFloorId, string vId, string vType)
         {
             DataSet mDset = null;

@@ -26,6 +26,7 @@ namespace SMSApp.Models
         public const string spr_FloorMap_Save = "[Masters].[spr_FloorMap_Save]";
         public const string spr_GetFloorMapDtls = "[Masters].[spr_GetFloorMapDtls]";
         public const string spr_GetAllControllerList = "[Masters].[spr_GetAllControllerList]";
+        public const string spr_Floor_Validation = "[Masters].[spr_Floor_Validation]";
 
         public const string spr_Floor_BookSeat = "[dbo].[spr_Floor_BookSeat]";
         public const string spr_Floor_ReleaseSeat = "[dbo].[spr_Floor_ReleaseSeat]";

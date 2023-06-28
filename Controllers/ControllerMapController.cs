@@ -86,13 +86,13 @@ namespace SMSApp.Controllers
 
             mDset = mControllerMapBLL.ViewControllerMapList("", Configuration);
 
-            if (mDset != null && mDset.Tables.Count > 0)
-            {
-                foreach (DataRow mDrow in mDset.Tables[0].Rows)
-                {
-                    mDrow["EncControllerId"] = Helper.Encrypt(mDrow["ControllerId"].ToString());
-                }
-            }
+            //if (mDset != null && mDset.Tables.Count > 0)
+            //{
+            //    foreach (DataRow mDrow in mDset.Tables[0].Rows)
+            //    {
+            //        mDrow["EncControllerId"] = Helper.Encrypt(mDrow["ControllerId"].ToString());
+            //    }
+            //}
 
             return Json(JsonConvert.SerializeObject(mDset));
         }
@@ -107,7 +107,7 @@ namespace SMSApp.Controllers
             mControllerMapBLL = new ControllerMapBLL();
             mControllerMapSC = new ControllerMapSC();
 
-            id = Helper.Decrypt(id);
+            //id = Helper.Decrypt(id);
 
             mControllerMapSC = mControllerMapBLL.ControllerMapGetById(id, Configuration);
 

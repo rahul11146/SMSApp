@@ -224,11 +224,19 @@ namespace SMSApp.Controllers
             FloorBLL mFloorBLL = null;
             FloorSC mFloorSC = null;
             string mUserId = string.Empty;
+            string mIsSuccess = string.Empty;
 
             mFloorBLL = new FloorBLL();
             mFloorSC = new FloorSC();
 
             mUserId = User.GetUserId();
+
+            mIsSuccess = mFloorBLL.FloorGetByIdValidate(id, mUserId, Configuration);
+
+            if (mIsSuccess == "0")
+            {
+                return RedirectToAction("Index", "UnAuthorize");
+            }
 
             mFloorSC = mFloorBLL.FloorGetById(id, mUserId, Configuration);
 

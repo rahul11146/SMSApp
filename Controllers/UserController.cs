@@ -102,13 +102,13 @@ namespace SMSApp.Controllers
 
             mDset = mUserBLL.ViewUserList(vUserId, Configuration);
 
-            if (mDset != null && mDset.Tables.Count > 0)
-            {
-                foreach (DataRow mDrow in mDset.Tables[0].Rows)
-                {
-                    mDrow["UserEncId"] = Helper.Encrypt(mDrow["UserId"].ToString());
-                }
-            }
+            //if (mDset != null && mDset.Tables.Count > 0)
+            //{
+            //    foreach (DataRow mDrow in mDset.Tables[0].Rows)
+            //    {
+            //        mDrow["UserEncId"] = Helper.Encrypt(mDrow["UserId"].ToString());
+            //    }
+            //}
 
             return Json(JsonConvert.SerializeObject(mDset));
         }
@@ -123,7 +123,7 @@ namespace SMSApp.Controllers
             mUserBLL = new UserBLL();
             mUserSC = new UserSC();
 
-            id = Helper.Decrypt(id);
+            //id = Helper.Decrypt(id);
 
             mUserSC = mUserBLL.UserGetById(id, Configuration);
             mUserSC.PageType = PageType;
@@ -192,7 +192,7 @@ namespace SMSApp.Controllers
                 vCurrUsrId = vUserId;
             }
 
-            vCurrUsrId = Helper.Decrypt(vCurrUsrId);
+            //vCurrUsrId = Helper.Decrypt(vCurrUsrId);
 
             mDset = mUserBLL.GetAllMapFloor(vCurrUsrId, Configuration);
 

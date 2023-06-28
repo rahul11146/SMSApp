@@ -1,0 +1,23 @@
+﻿@model SMSApp.Models.SC.ControllerMapSC
+
+@{
+    ViewBag.Title = "UnAuthorize";
+    Layout = null;
+}
+
+<script type="text/javascript">
+    function RedirectFloorList() {
+        window.location.href = "@Url.Action("Index","Floor")";
+    }
+
+</script>
+
+<div style="border:1px;font-size:15px;color:lightcoral;align-content:center;margin:20px !important;font-weight:bold">
+    UnAuthorized Access, please contact System Administrator !!!
+    <br /></br>
+
+    <button type="button" onclick="return RedirectFloorList();">
+        Click Here
+    </button> to redirect to back
+
+</div>

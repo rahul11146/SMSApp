@@ -157,6 +157,20 @@ namespace WebTemplate.Models.BLL
             return mFloorSC;
         }
 
+        public string  FloorGetByIdValidate(String vFloorId, string vUserId, IConfiguration _configuration)
+        {
+            FloorDAL mFloorDAL = null;
+            FloorSC mFloorSC = null;
+            string mIsSuccess = string.Empty;
+
+            mFloorDAL = new FloorDAL(_configuration);
+            mFloorSC = new FloorSC();
+
+            mIsSuccess = mFloorDAL.FloorGetByIdValidate(vFloorId, vUserId);
+
+            return mIsSuccess;
+        }
+
         public IList<FloorMapSC> FloorMapGetById(string? vFloorId, string vId, string vType, IConfiguration _configuration)
         {
             FloorDAL mFloorDAL = null;
