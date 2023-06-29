@@ -1682,3 +1682,4 @@ D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Rele
 D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\SMSApp.pdb
 D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\SMSApp.genruntimeconfig.cache
 D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\ref\SMSApp.dll
+D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\bin\Release\net6.0\web.config

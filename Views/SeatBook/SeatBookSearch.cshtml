@@ -87,7 +87,10 @@
                             </div>
                             <div class="col-11 col-md-11 col-lg-11" style="margin-top : 5px !important">
                                 <div class="form-group">
-                                    <label class="form-label title" for="rdSearchFlR" style="cursor:pointer">フロア状況検索</label>
+                                    <label class="form-label title" for="rdSearchFlR" style="cursor:pointer">
+                                        フロア状況検索
+                                        ( 選択したフロアマップに出社しているユーザのみ表示されます。)
+                                    </label>
                                     <div class="controls">
                                         <div class="input-group sm-3">
                                             <select id="ddlFloor" class="form-control ddlSelect2Single" ng-model="FloorId" on-Finish-Render>
@@ -189,7 +192,7 @@
                                     <td ng-bind="item.SeatDetails"></td>
                                     <td class="text text-center">
                                         @*<span style="cursor:pointer" ng-click="ViewSeat(item.FloorId,item.FloorMapId);" ng-show="item.BookType == '登録済み'">
-                                            <i class="fa fa-eye"></i>
+                                        <i class="fa fa-eye"></i>
                                         </span>*@
                                         <span style="cursor:pointer" ng-click="OpenSeat(item.FloorId,item.FloorMapId);" ng-show="item.BookType == '登録済み'">
                                             <i class="fa fa-eye"></i>

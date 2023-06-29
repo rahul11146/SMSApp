@@ -1,4 +1,5 @@
 D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\PubTmp\Out\SMSApp.exe
+D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\PubTmp\Out\web.config
 D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\PubTmp\Out\appsettings.json
 D:\Apps\Seat Management System\SMSApplication\SMSAppFloorPreview\SMSApp\obj\Release\net6.0\PubTmp\Out\refs\Microsoft.AspNetCore.Antiforgery.dll

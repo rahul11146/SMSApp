@@ -12,6 +12,9 @@ using Microsoft.AspNetCore.Hosting;
 using System.Net;
 using System.Net.NetworkInformation;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Principal;
+using System.DirectoryServices.AccountManagement;
 
 namespace SMSApp.Controllers
 {
@@ -36,11 +39,31 @@ namespace SMSApp.Controllers
             return View();
         }
 
+        public string? GetUser()
+        {
+            return _httpContextAccessor.HttpContext.User?.Identity?.Name;
+        }
+
         [HttpGet]
         public ActionResult Index()
         {
+            //String UserName = Request.LogonUserIdentity.Name;
+            //String? UserName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName;
+            //string vUsername = this.GetUser();
+
+            //WindowsIdentity microsoftIdentity = WindowsIdentity.GetCurrent();
+            //UserPrincipal userPrincipal = UserPrincipal.Current;
+            //string mName = userPrincipal.Name;
+            //string mDisplayName = userPrincipal.DisplayName;
+
+            //this.DebugLog("Start 1");
+            //this.DebugLog(mName);
+            //this.DebugLog(mDisplayName);
+            //this.DebugLog("End");
+
             if (Configuration.GetSection("AppSettings:IsSSO").Value.ToString() == "Y")
             {
+
                 LoginBLL mLoginBLL = null;
                 DataSet mDset = new DataSet();
                 mLoginBLL = new LoginBLL();
@@ -188,6 +211,12 @@ namespace SMSApp.Controllers
             }
 
             throw new InvalidOperationException("Unable to find DNS Address");
+        }
+
+        public void DebugLog(string vMessage)
+        {
+            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "DebugLog.txt", vMessage);
+            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "DebugLog.txt", Environment.NewLine);
         }
 
     }
