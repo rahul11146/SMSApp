@@ -119,11 +119,24 @@ namespace SMSApp.Controllers
         {
             UserBLL mUserBLL = null;
             UserSC mUserSC = null;
+            string mUserId = string.Empty;
+            string mIsSuccess = string.Empty;
 
             mUserBLL = new UserBLL();
             mUserSC = new UserSC();
 
-            //id = Helper.Decrypt(id);
+            // User Validation
+            mUserId = User.GetUserId();
+            if (PageType != "Prof")
+            {
+
+                mIsSuccess = mUserBLL.UserGetByIdValidate(id, mUserId, Configuration);
+
+                if (mIsSuccess == "0")
+                {
+                    return RedirectToAction("Index", "UnAuthorize");
+                }
+            }
 
             mUserSC = mUserBLL.UserGetById(id, Configuration);
             mUserSC.PageType = PageType;

@@ -88,6 +88,20 @@ namespace WebTemplate.Models.BLL
             return mUserAccessSC;
         }
 
+        public string UserAccessGetByIdValidate(string vUserAccessId, string vCurrUserId, IConfiguration _configuration)
+        {
+            UserAccessDAL mUserAccessDAL = null;
+            UserSC mUserSC = null;
+            string mIsSuccess = string.Empty;
+
+            mUserAccessDAL = new UserAccessDAL(_configuration);
+            mUserSC = new UserSC();
+
+            mIsSuccess = mUserAccessDAL.UserAccessGetByIdValidate(vUserAccessId, vCurrUserId);
+
+            return mIsSuccess;
+        }
+
         // Get All User List
         public DataSet GetAllUsersList(IConfiguration _configuration)
         {

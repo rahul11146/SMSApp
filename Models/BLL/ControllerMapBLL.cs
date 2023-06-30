@@ -63,6 +63,20 @@ namespace WebTemplate.Models.BLL
             return mControllerMapSC;
         }
 
+        public string ControllerMapGetByIdValidate(string vControllerMapId, string vCurrUserId, IConfiguration _configuration)
+        {
+            ControllerMapDAL mControllerMapDAL = null;
+            UserSC mUserSC = null;
+            string mIsSuccess = string.Empty;
+
+            mControllerMapDAL = new ControllerMapDAL(_configuration);
+            mUserSC = new UserSC();
+
+            mIsSuccess = mControllerMapDAL.ControllerMapGetByIdValidate(vControllerMapId, vCurrUserId);
+
+            return mIsSuccess;
+        }
+
         //Get All Floor List
         public DataSet GetAllFloor(string vCurrUsrId, IConfiguration _configuration)
         {

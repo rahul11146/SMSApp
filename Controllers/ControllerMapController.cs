@@ -95,9 +95,21 @@ namespace SMSApp.Controllers
         {
             ControllerMapBLL mControllerMapBLL = null;
             ControllerMapSC mControllerMapSC = null;
+            string mUserId = string.Empty;
+            string mIsSuccess = string.Empty;
 
             mControllerMapBLL = new ControllerMapBLL();
             mControllerMapSC = new ControllerMapSC();
+
+            mUserId = User.GetUserId();
+
+            // Controller Validation
+            mIsSuccess = mControllerMapBLL.ControllerMapGetByIdValidate(id, mUserId, Configuration);
+
+            if (mIsSuccess == "0")
+            {
+                return RedirectToAction("Index", "UnAuthorize");
+            }
 
             mControllerMapSC = mControllerMapBLL.ControllerMapGetById(id, Configuration);
 

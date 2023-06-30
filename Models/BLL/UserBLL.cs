@@ -84,6 +84,20 @@ namespace WebTemplate.Models.BLL
             return mUserSC;
         }
 
+        public string UserGetByIdValidate(string vUserId, string vCurrUserId, IConfiguration _configuration)
+        {
+            UserDAL mUserDAL = null;
+            UserSC mUserSC = null;
+            string mIsSuccess = string.Empty;
+
+            mUserDAL = new UserDAL(_configuration);
+            mUserSC = new UserSC();
+
+            mIsSuccess = mUserDAL.UserGetByIdValidate(vUserId,vCurrUserId);
+
+            return mIsSuccess;
+        }
+
         // Get All Roles
         public DataSet GetAllRoles(IConfiguration _configuration)
         {

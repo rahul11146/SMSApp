@@ -132,6 +132,37 @@ namespace SMSApp.Models.DAL
             return mUserAccessSC;
         }
 
+        public string UserAccessGetByIdValidate(string vUserAccessId, string vCurrUserId)
+        {
+            DataSet mDset = null;
+            FloorSC mFloorSC = null;
+            string? IsSuccess = string.Empty;
+
+            try
+            {
+                DbCommand mDbCommand = null;
+
+                mFloorSC = new FloorSC();
+                mDbCommand = CurrentDataBase.GetStoredProcCommand(StoredProcedures.spr_UserAccess_Validation);
+
+                CurrentDataBase.AddInParameter(mDbCommand, "@vUserAccessId", DbType.String, vUserAccessId);
+                CurrentDataBase.AddInParameter(mDbCommand, "@vCurrUsrId", DbType.String, vCurrUserId);
+
+                mDset = CurrentDataBase.ExecuteDataSet(mDbCommand);
+
+                if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
+                {
+                    IsSuccess = mDset.Tables[0].Rows[0]["IsSuccess"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return IsSuccess;
+        }
+
         // Get All User List
         public DataSet GetAllUsersList()
         {

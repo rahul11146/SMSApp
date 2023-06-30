@@ -12,8 +12,18 @@
     string? mName = string.Empty;
     string? mRoleName = string.Empty;
 
+    string? mUserTitle = string.Empty;
+    string? mDeptName = string.Empty;
+
+    string? mProfPic = string.Empty;
+
     mName = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value;
     mRoleName = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.PrimarySid)?.Value;
+
+    mUserTitle = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Actor)?.Value;
+    mDeptName = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.GivenName)?.Value;
+
+    mProfPic = Context.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.UserData)?.Value;
 
     Microsoft.Extensions.Primitives.StringValues queryVal;
     string? mType = string.Empty;
@@ -63,6 +73,12 @@
 
     var mWidth = '@mWidth';
     var mHeight = '@mHeight';
+
+    var _Name = '@mName';
+    var _UserTitle = '@mUserTitle';
+    var _DeptName = '@mDeptName';
+
+    var _ProfPic = '@mProfPic';
 
 </script>
 
@@ -311,7 +327,9 @@
                                 <div class="form-group">
                                     <label class="form-label">プロフィール写真</label>
                                     <div class="controls">
+
                                         <img id="spImgUserDtls" src="~/users.jpg" width="100px" height="100px" />
+
                                     </div>
                                 </div>
                             </div>
@@ -594,13 +612,29 @@
 
                     if (mFloorMapJSON[i].Id == vId) {
 
-                        //var mName = (mFloorMapJSON[i].UserDisplay != undefined && mFloorMapJSON[i].UserDisplay != "")
-                        //    ? mFloorMapJSON[i].UserDisplay : mFloorMapJSON[i].LNName;
+                        var mName = "";
 
-                        var mName = mFloorMapJSON[i].LNKanji + ' ' + mFloorMapJSON[i].FNKanji;
+                        if (mFloorMapJSON[i].DeptName != "" && mFloorMapJSON[i].DeptName != undefined) {
+                            mName = mFloorMapJSON[i].DeptName + "<br/>";
+                        }
 
-                        if (mName != "" && mName != undefined) {
-                            mName = mFloorMapJSON[i].DeptName + "<br/>" + mFloorMapJSON[i].UserTitle + "<br/>" + mName;
+                        if (mFloorMapJSON[i].UserTitle != "" && mFloorMapJSON[i].UserTitle != undefined) {
+                            mName = mName + mFloorMapJSON[i].UserTitle + "<br/>";
+                        }
+
+                        if (mFloorMapJSON[i].LNKanji != "" && mFloorMapJSON[i].LNKanji != undefined) {
+                            mName = mName + mFloorMapJSON[i].LNKanji + ' ' + mFloorMapJSON[i].FNKanji;
+                        }
+
+                        if (mName == "") {
+
+                            if (_DeptName != "")
+                                mName = _DeptName + "</br>";
+
+                            if (_UserTitle != "")
+                                mName = mName + _UserTitle + "<br/>";
+
+                            mName = mName + _Name;
                         }
 
                         $("#spUserName").html(mName);
@@ -609,8 +643,17 @@
                             var mPhoto = mFloorMapJSON[i].ProfilePhotoPath;
 
                             mPhoto = mPhoto.replace("~", "..");
-
                             $("#spImgUserDtls").attr("src", mPhoto);
+                        }
+                        else {
+                            var mPhoto = _ProfPic;
+
+                            if (mPhoto != "" && mPhoto != undefined) {
+
+                                mPhoto = mPhoto.replace("~", "..");
+                                $("#spImgUserDtls").attr("src", mPhoto);
+
+                            }
                         }
 
                         $("#spSeatId").text(mFloorMapJSON[i].SeatID);

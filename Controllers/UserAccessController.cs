@@ -112,9 +112,21 @@ namespace SMSApp.Controllers
         {
             UserAccessBLL mUserAccessBLL = null;
             UserAccessSC mUserAccessSC = null;
+            string mUserId = string.Empty;
+            string mIsSuccess = string.Empty;
 
             mUserAccessBLL = new UserAccessBLL();
             mUserAccessSC = new UserAccessSC();
+
+            mUserId = User.GetUserId();
+
+            // Controller Validation
+            mIsSuccess = mUserAccessBLL.UserAccessGetByIdValidate(id, mUserId, Configuration);
+
+            if (mIsSuccess == "0")
+            {
+                return RedirectToAction("Index", "UnAuthorize");
+            }
 
             mUserAccessSC = mUserAccessBLL.UserAccessGetById(id, Configuration);
 
