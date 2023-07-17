@@ -61,15 +61,23 @@ namespace SMSApp.Controllers
             //this.DebugLog(mDisplayName);
             //this.DebugLog("End");
 
+            this.DebugLog("Start 1");
+
             if (Configuration.GetSection("AppSettings:IsSSO").Value.ToString() == "Y")
             {
+
+                this.DebugLog("SSO Entry Check");
 
                 LoginBLL mLoginBLL = null;
                 DataSet mDset = new DataSet();
                 mLoginBLL = new LoginBLL();
                 string? IsUserExists = string.Empty;
 
-                string userName = Environment.UserName;
+                //string userName = Environment.UserName;
+
+                string userName = "Abhish";
+
+                this.DebugLog("SSO Username : " + userName);
 
                 try
                 {
@@ -79,22 +87,38 @@ namespace SMSApp.Controllers
                 {
                 }
 
+
                 mDset = mLoginBLL.UserAuthenticate(userName, "SSO", Configuration);
+
 
                 if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
                 {
+                    this.DebugLog("SSO Details Count : " + mDset.Tables[0].Rows.Count.ToString());
+
                     IsUserExists = mDset.Tables[0].Rows[0]["IsUserExists"].ToString();
+
+                    this.DebugLog("User Exists : " + IsUserExists);
 
                     if (IsUserExists == "Y")
                     {
                         var claims = new List<Claim>
                     {
-                        new Claim(ClaimTypes.Name, mDset.Tables[0].Rows[0]["Name"].ToString()),
+                         new Claim(ClaimTypes.Name, mDset.Tables[0].Rows[0]["Name"].ToString()),
                         new Claim(ClaimTypes.NameIdentifier, mDset.Tables[0].Rows[0]["UserId"].ToString()),
                         new Claim(ClaimTypes.PrimarySid, mDset.Tables[0].Rows[0]["RoleCode"].ToString()),
                         new Claim(ClaimTypes.Role, mDset.Tables[0].Rows[0]["RoleName"].ToString()),
-                        new Claim(ClaimTypes.UserData, mDset.Tables[0].Rows[0]["ProfPic"].ToString())
+                        new Claim(ClaimTypes.UserData, mDset.Tables[0].Rows[0]["ProfPic"].ToString()),
+                        new Claim(ClaimTypes.Actor, mDset.Tables[0].Rows[0]["UserTitle"].ToString()),
+                        new Claim(ClaimTypes.GivenName, mDset.Tables[0].Rows[0]["DeptName"].ToString())
                     };
+
+                        this.DebugLog("SSO Username : " + mDset.Tables[0].Rows[0]["Name"].ToString());
+                        this.DebugLog("SSO UserId : " + mDset.Tables[0].Rows[0]["UserId"].ToString());
+                        this.DebugLog("SSO RoleCode : " + mDset.Tables[0].Rows[0]["RoleCode"].ToString());
+                        this.DebugLog("SSO RoleName : " + mDset.Tables[0].Rows[0]["RoleName"].ToString());
+                        this.DebugLog("SSO ProfPic : " + mDset.Tables[0].Rows[0]["ProfPic"].ToString());
+                        this.DebugLog("SSO UserTitle : " + mDset.Tables[0].Rows[0]["UserTitle"].ToString());
+                        this.DebugLog("SSO DeptName : " + mDset.Tables[0].Rows[0]["DeptName"].ToString());
 
                         var claimsIdentity = new ClaimsIdentity(claims, "Login");
 
@@ -102,6 +126,10 @@ namespace SMSApp.Controllers
 
                         return RedirectToAction("Index", "Home");
                     }
+                }
+                else
+                {
+                    this.DebugLog("User not exists");
                 }
             }
 
@@ -131,6 +159,9 @@ namespace SMSApp.Controllers
         [HttpPost]
         public ActionResult Submit(LoginSC vLoginSC)
         {
+
+            this.DebugLog("Login Button Check");
+
             LoginBLL mLoginBLL = null;
             DataSet mDset = new DataSet();
             mLoginBLL = new LoginBLL();
@@ -142,7 +173,11 @@ namespace SMSApp.Controllers
 
             if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
             {
+                this.DebugLog("SSO Details Count : " + mDset.Tables[0].Rows.Count.ToString());
+
                 IsUserExists = mDset.Tables[0].Rows[0]["IsUserExists"].ToString();
+
+                this.DebugLog("User Exists : " + IsUserExists);
 
                 if (IsUserExists == "Y")
                 {
@@ -157,10 +192,23 @@ namespace SMSApp.Controllers
                         new Claim(ClaimTypes.GivenName, mDset.Tables[0].Rows[0]["DeptName"].ToString())
                     };
 
+                    this.DebugLog("SSO Username : " + mDset.Tables[0].Rows[0]["Name"].ToString());
+                    this.DebugLog("SSO UserId : " + mDset.Tables[0].Rows[0]["UserId"].ToString());
+                    this.DebugLog("SSO RoleCode : " + mDset.Tables[0].Rows[0]["RoleCode"].ToString());
+                    this.DebugLog("SSO RoleName : " + mDset.Tables[0].Rows[0]["RoleName"].ToString());
+                    this.DebugLog("SSO ProfPic : " + mDset.Tables[0].Rows[0]["ProfPic"].ToString());
+                    this.DebugLog("SSO UserTitle : " + mDset.Tables[0].Rows[0]["UserTitle"].ToString());
+                    this.DebugLog("SSO DeptName : " + mDset.Tables[0].Rows[0]["DeptName"].ToString());
+
                     var claimsIdentity = new ClaimsIdentity(claims, "Login");
 
                     HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
                 }
+
+            }
+            else
+            {
+                this.DebugLog("User not exists");
             }
 
             return Json(new
@@ -217,8 +265,8 @@ namespace SMSApp.Controllers
 
         public void DebugLog(string vMessage)
         {
-            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "DebugLog.txt", vMessage);
-            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "DebugLog.txt", Environment.NewLine);
+            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + System.DateTime.Now.ToString("dd_MM_yyyy") + "_DebugLog.txt", vMessage);
+            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + System.DateTime.Now.ToString("dd_MM_yyyy") + "_DebugLog.txt", Environment.NewLine);
         }
 
     }

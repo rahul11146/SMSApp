@@ -176,13 +176,8 @@
                 <div class="row">
                     <div class="col-6 col-md-6 col-lg-6">
                         <div class="form-group">
-                            @*<label class="form-label title">フロア名</label>*@
                             <div class="controls" id="dvControls" style="margin-top:-15px">
                                 <img id="myImgId" src="@Url.Content(Model.ImagePath)" />
-                                @*<div id="dv_1" onclick="BookSeat(24,'15','20','','undefined','undefined','293','246')" style="position: absolute; width: 15px; height: 20px; background: rgba(220, 20, 60, 0.4);">
-                                <span style="position: absolute; width: 30px; height: 20px;  font-weight: bolder;color:black;"> 太郎</span>
-                                </div>*@
-                                @*<div id="rectangle" onmouseover="showPopup()" onmouseout="hidePopup()" onclick="handleClick()">Click Me</div>*@
                             </div>
                         </div>
                     </div>
@@ -567,11 +562,9 @@
                         elemDiv.setAttribute("onclick", "BookSeat(" + mFloorMapJSON[i].Id + ",'" + mIsCreatedUsr + "')");
                     }
                     else if (mIsCreatedUsr == "N") {
-
                         var mFullName = mFloorMapJSON[i].LNKanji + ' ' + mFloorMapJSON[i].FNKanji;
 
                         elemDiv.setAttribute("onclick", "showPopup('" + i.toString() + "','" + mFullName + "','" + mFloorMapJSON[i].UserTitle + "','" + mFloorMapJSON[i].ProfilePhotoPath + "','" + mFloorMapJSON[i].DeptName + "')");
-
                     }
 
                     if ('@mRoleName' == "FloorAdmin" || '@mRoleName' == "SystemAdm") {
