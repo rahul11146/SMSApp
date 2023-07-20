@@ -1,0 +1,330 @@
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N
+Login Button Check
+SSO Details Count : 1
+User Exists : Y
+SSO Username : Singh Abhish
+SSO UserId : 7
+SSO RoleCode : SystemAdm
+SSO RoleName : Super Admin
+SSO ProfPic : ~/Uploads/ProfileImage/7.jpg
+SSO UserTitle : Manager
+SSO DeptName : 
+Login Button Check
+SSO Details Count : 1
+User Exists : Y
+SSO Username : Singh Abhish
+SSO UserId : 7
+SSO RoleCode : SystemAdm
+SSO RoleName : Super Admin
+SSO ProfPic : ~/Uploads/ProfileImage/7.jpg
+SSO UserTitle : Manager
+SSO DeptName : 

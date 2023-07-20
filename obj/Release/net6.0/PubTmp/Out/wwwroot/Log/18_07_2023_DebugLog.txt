@@ -1,0 +1,5 @@
+Start 1
+SSO Entry Check
+SSO Username : SeatApp
+SSO Details Count : 1
+User Exists : N

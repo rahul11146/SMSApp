@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Principal;
 using System.DirectoryServices.AccountManagement;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SMSApp.Controllers
 {
@@ -47,61 +48,47 @@ namespace SMSApp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            //String UserName = Request.LogonUserIdentity.Name;
-            //String? UserName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName;
-            //string vUsername = this.GetUser();
+            return View("Login");
+        }
 
-            //WindowsIdentity microsoftIdentity = WindowsIdentity.GetCurrent();
-            //UserPrincipal userPrincipal = UserPrincipal.Current;
-            //string mName = userPrincipal.Name;
-            //string mDisplayName = userPrincipal.DisplayName;
-
-            //this.DebugLog("Start 1");
-            //this.DebugLog(mName);
-            //this.DebugLog(mDisplayName);
-            //this.DebugLog("End");
-
+        [HttpPost]
+        public JsonResult LoginWithSSO()
+        {
             this.DebugLog("Start 1");
+            this.DebugLog("SSO Entry Check");
 
-            if (Configuration.GetSection("AppSettings:IsSSO").Value.ToString() == "Y")
+            LoginBLL mLoginBLL = null;
+            DataSet mDset = new DataSet();
+            mLoginBLL = new LoginBLL();
+            string? IsUserExists = string.Empty;
+
+            //string userName = Environment.UserName;
+
+            string userName = Environment.UserName;
+
+            this.DebugLog("SSO Username : " + userName);
+
+            try
             {
+                System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "LogFile.txt", userName);
+            }
+            catch (Exception)
+            {
+            }
 
-                this.DebugLog("SSO Entry Check");
+            mDset = mLoginBLL.UserAuthenticate(userName, "SSO", Configuration);
 
-                LoginBLL mLoginBLL = null;
-                DataSet mDset = new DataSet();
-                mLoginBLL = new LoginBLL();
-                string? IsUserExists = string.Empty;
+            if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
+            {
+                this.DebugLog("SSO Details Count : " + mDset.Tables[0].Rows.Count.ToString());
 
-                //string userName = Environment.UserName;
+                IsUserExists = mDset.Tables[0].Rows[0]["IsUserExists"].ToString();
 
-                string userName = "Abhish";
+                this.DebugLog("User Exists : " + IsUserExists);
 
-                this.DebugLog("SSO Username : " + userName);
-
-                try
+                if (IsUserExists == "Y")
                 {
-                    System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "LogFile.txt", userName);
-                }
-                catch (Exception)
-                {
-                }
-
-
-                mDset = mLoginBLL.UserAuthenticate(userName, "SSO", Configuration);
-
-
-                if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
-                {
-                    this.DebugLog("SSO Details Count : " + mDset.Tables[0].Rows.Count.ToString());
-
-                    IsUserExists = mDset.Tables[0].Rows[0]["IsUserExists"].ToString();
-
-                    this.DebugLog("User Exists : " + IsUserExists);
-
-                    if (IsUserExists == "Y")
-                    {
-                        var claims = new List<Claim>
+                    var claims = new List<Claim>
                     {
                          new Claim(ClaimTypes.Name, mDset.Tables[0].Rows[0]["Name"].ToString()),
                         new Claim(ClaimTypes.NameIdentifier, mDset.Tables[0].Rows[0]["UserId"].ToString()),
@@ -112,29 +99,122 @@ namespace SMSApp.Controllers
                         new Claim(ClaimTypes.GivenName, mDset.Tables[0].Rows[0]["DeptName"].ToString())
                     };
 
-                        this.DebugLog("SSO Username : " + mDset.Tables[0].Rows[0]["Name"].ToString());
-                        this.DebugLog("SSO UserId : " + mDset.Tables[0].Rows[0]["UserId"].ToString());
-                        this.DebugLog("SSO RoleCode : " + mDset.Tables[0].Rows[0]["RoleCode"].ToString());
-                        this.DebugLog("SSO RoleName : " + mDset.Tables[0].Rows[0]["RoleName"].ToString());
-                        this.DebugLog("SSO ProfPic : " + mDset.Tables[0].Rows[0]["ProfPic"].ToString());
-                        this.DebugLog("SSO UserTitle : " + mDset.Tables[0].Rows[0]["UserTitle"].ToString());
-                        this.DebugLog("SSO DeptName : " + mDset.Tables[0].Rows[0]["DeptName"].ToString());
+                    this.DebugLog("SSO Username : " + mDset.Tables[0].Rows[0]["Name"].ToString());
+                    this.DebugLog("SSO UserId : " + mDset.Tables[0].Rows[0]["UserId"].ToString());
+                    this.DebugLog("SSO RoleCode : " + mDset.Tables[0].Rows[0]["RoleCode"].ToString());
+                    this.DebugLog("SSO RoleName : " + mDset.Tables[0].Rows[0]["RoleName"].ToString());
+                    this.DebugLog("SSO ProfPic : " + mDset.Tables[0].Rows[0]["ProfPic"].ToString());
+                    this.DebugLog("SSO UserTitle : " + mDset.Tables[0].Rows[0]["UserTitle"].ToString());
+                    this.DebugLog("SSO DeptName : " + mDset.Tables[0].Rows[0]["DeptName"].ToString());
 
-                        var claimsIdentity = new ClaimsIdentity(claims, "Login");
+                    var claimsIdentity = new ClaimsIdentity(claims, "Login");
 
-                        HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+                    HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                        return RedirectToAction("Index", "Home");
-                    }
-                }
-                else
-                {
-                    this.DebugLog("User not exists");
+                    return Json(new { IsUserExists = "Y" });
+
+                    //return RedirectToAction("Index", "Home");
                 }
             }
+            else
+            {
+                this.DebugLog("User not exists");
+                return Json(new { IsUserExists = "N" });
+            }
 
-            return View("Login");
+            return Json(new { IsUserExists = "N" });
         }
+
+        //[HttpGet]
+        //public ActionResult Index()
+        //{
+        //    //String UserName = Request.LogonUserIdentity.Name;
+        //    //String? UserName = System.DirectoryServices.AccountManagement.UserPrincipal.Current.DisplayName;
+        //    //string vUsername = this.GetUser();
+
+        //    //WindowsIdentity microsoftIdentity = WindowsIdentity.GetCurrent();
+        //    //UserPrincipal userPrincipal = UserPrincipal.Current;
+        //    //string mName = userPrincipal.Name;
+        //    //string mDisplayName = userPrincipal.DisplayName;
+
+        //    //this.DebugLog("Start 1");
+        //    //this.DebugLog(mName);
+        //    //this.DebugLog(mDisplayName);
+        //    //this.DebugLog("End");
+
+        //    this.DebugLog("Start 1");
+
+        //    if (Configuration.GetSection("AppSettings:IsSSO").Value.ToString() == "Y")
+        //    {
+
+        //        this.DebugLog("SSO Entry Check");
+
+        //        LoginBLL mLoginBLL = null;
+        //        DataSet mDset = new DataSet();
+        //        mLoginBLL = new LoginBLL();
+        //        string? IsUserExists = string.Empty;
+
+        //        //string userName = Environment.UserName;
+
+        //        string userName = "SeatApp";//Environment.UserName;
+
+        //        this.DebugLog("SSO Username : " + userName);
+
+        //        try
+        //        {
+        //            System.IO.File.AppendAllText(_webHostEnvironment.WebRootPath + "\\Log\\" + "LogFile.txt", userName);
+        //        }
+        //        catch (Exception)
+        //        {
+        //        }
+
+        //        mDset = mLoginBLL.UserAuthenticate(userName, "SSO", Configuration);
+
+
+        //        if (mDset != null && mDset.Tables.Count > 0 && mDset.Tables[0].Rows.Count > 0)
+        //        {
+        //            this.DebugLog("SSO Details Count : " + mDset.Tables[0].Rows.Count.ToString());
+
+        //            IsUserExists = mDset.Tables[0].Rows[0]["IsUserExists"].ToString();
+
+        //            this.DebugLog("User Exists : " + IsUserExists);
+
+        //            if (IsUserExists == "Y")
+        //            {
+        //                var claims = new List<Claim>
+        //            {
+        //                 new Claim(ClaimTypes.Name, mDset.Tables[0].Rows[0]["Name"].ToString()),
+        //                new Claim(ClaimTypes.NameIdentifier, mDset.Tables[0].Rows[0]["UserId"].ToString()),
+        //                new Claim(ClaimTypes.PrimarySid, mDset.Tables[0].Rows[0]["RoleCode"].ToString()),
+        //                new Claim(ClaimTypes.Role, mDset.Tables[0].Rows[0]["RoleName"].ToString()),
+        //                new Claim(ClaimTypes.UserData, mDset.Tables[0].Rows[0]["ProfPic"].ToString()),
+        //                new Claim(ClaimTypes.Actor, mDset.Tables[0].Rows[0]["UserTitle"].ToString()),
+        //                new Claim(ClaimTypes.GivenName, mDset.Tables[0].Rows[0]["DeptName"].ToString())
+        //            };
+
+        //                this.DebugLog("SSO Username : " + mDset.Tables[0].Rows[0]["Name"].ToString());
+        //                this.DebugLog("SSO UserId : " + mDset.Tables[0].Rows[0]["UserId"].ToString());
+        //                this.DebugLog("SSO RoleCode : " + mDset.Tables[0].Rows[0]["RoleCode"].ToString());
+        //                this.DebugLog("SSO RoleName : " + mDset.Tables[0].Rows[0]["RoleName"].ToString());
+        //                this.DebugLog("SSO ProfPic : " + mDset.Tables[0].Rows[0]["ProfPic"].ToString());
+        //                this.DebugLog("SSO UserTitle : " + mDset.Tables[0].Rows[0]["UserTitle"].ToString());
+        //                this.DebugLog("SSO DeptName : " + mDset.Tables[0].Rows[0]["DeptName"].ToString());
+
+        //                var claimsIdentity = new ClaimsIdentity(claims, "Login");
+
+        //                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
+
+        //                return RedirectToAction("Index", "Home");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            this.DebugLog("User not exists");
+        //        }
+        //    }
+
+        //    return View("Login");
+        //}
 
         private string getWindowsUserId()
         {

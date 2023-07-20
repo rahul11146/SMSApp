@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VL2Lpe2S3+cuv9NCkXr9HoXfCSo2y4G8wfbBGUgv0OY=",
+  "Hash": "LlQcOqVGgnjciLfS5QVmfwiYyZRf/ur7HghUWXjtD4o=",
   "Source": "SMSApp",
   "BasePath": "_content/SMSApp",
   "Mode": "Default",
@@ -1326,12 +1326,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\wwwroot\\Log\\DebugLog.txt",
+      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\wwwroot\\Log\\18_07_2023_DebugLog.txt",
       "SourceId": "SMSApp",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\wwwroot\\",
       "BasePath": "_content/SMSApp",
-      "RelativePath": "Log/DebugLog.txt",
+      "RelativePath": "Log/18_07_2023_DebugLog.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1340,7 +1340,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Log\\DebugLog.txt"
+      "OriginalItemSpec": "wwwroot\\Log\\18_07_2023_DebugLog.txt"
+    },
+    {
+      "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\wwwroot\\Log\\20_07_2023_DebugLog.txt",
+      "SourceId": "SMSApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\wwwroot\\",
+      "BasePath": "_content/SMSApp",
+      "RelativePath": "Log/20_07_2023_DebugLog.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Log\\20_07_2023_DebugLog.txt"
     },
     {
       "Identity": "D:\\Apps\\Seat Management System\\SMSApplication\\SMSAppFloorPreview\\SMSApp\\wwwroot\\Log\\LogFile.txt",
